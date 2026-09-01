@@ -52,39 +52,27 @@ namespace nnet {
 
     // RUFACTOR IS ALWAYS 8 HERE
 
+    InitAccum:
+        for (int accumulatorArrayIndex = 0; accumulatorArrayIndex < nout; accumulatorArrayIndex++) {
+            #pragma HLS UNROLL
+            dspAccumulators[accumulatorArrayIndex].mul_acc((hls::dsp48e1::A_t)biases[accumulatorArrayIndex], (hls::dsp48e1::B_t)1, true);
+        }
+
     InputLoop:
-        for (int inputLoopIndex = 0; inputLoopIndex < rufactor+1; inputLoopIndex++) {      // Loop through all inputs -> inputLoopIndex = x <-> working on input x
+        for (int inputLoopIndex = 0; inputLoopIndex < rufactor; inputLoopIndex++) {      // Loop through all inputs -> inputLoopIndex = x <-> working on input x
             #pragma HLS PIPELINE II=1 rewind
 
+            int weightLoopIndex = inputLoopIndex;
 
         NeuronLoop:
             for (int neuronLoopIndex = 0; neuronLoopIndex < block_factor; neuronLoopIndex++) {       // Loop through all neurons -> neuronLoopIndex = y <-> input_x * weight_y_x
                 #pragma HLS UNROLL
 
-                hls::dsp48e1::A_t dspA;
-                hls::dsp48e1::B_t dspB;
-                bool dspInit;
-                int weightSelectIndex;
-                int inputSelectIndex;
+                dspAccumulators[neuronLoopIndex].mul_acc((hls::dsp48e1::A_t)data[inputLoopIndex], (hls::dsp48e1::B_t)weights[weightLoopIndex], false);
 
-                if (inputLoopIndex == 0) {  // EXECUTE FOR THE FIRST LOOP ITERATION: INITIALIZE ACCUMULATOR REGISTERS WITH BIASES
-                    dspA = (hls::dsp48e1::A_t)biases[neuronLoopIndex];
-                    dspB = (hls::dsp48e1::B_t)1;
-                    dspInit = true;
-                }
-                else {                      // EXECUTE FOR REMAINING 8 LOOP ITERATIONS: REGULAR input_x * weight_y_x MAC
-                    weightSelectIndex = inputLoopIndex-1;
-                    inputSelectIndex = inputLoopIndex-1;
-                    dspA = (hls::dsp48e1::A_t)data[inputSelectIndex];
-                    dspB = (hls::dsp48e1::B_t)weights[weightSelectIndex];
-                    dspInit = false;
-
-                    // Increment weightSelectIndex
-                    weightSelectIndex += rufactor;    // ADDING 8 TO THE WEIGHTS INDEX GIVES US THE NEXT NEURON'S WEIGHT FOR THAT INPUT, e.g:
-                                                    // weights[0] = w_0_0 (neuron 0, input 0), weights[8] = w_1_0 (neuron 1, input 0)
-                    }
-
-                dspAccumulators[neuronLoopIndex].mul_acc(dspA, dspB, dspInit);
+                // Increment weightLoopIndex
+                weightLoopIndex += rufactor;    // ADDING 8 TO THE WEIGHTS INDEX GIVES US THE NEXT NEURON'S WEIGHT FOR THAT INPUT, e.g:
+                                                // weights[0] = w_0_0 (neuron 0, input 0), weights[8] = w_1_0 (neuron 1, input 0)
 
             }
         }
