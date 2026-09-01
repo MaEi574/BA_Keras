@@ -1,0 +1,92 @@
+Backend: Vitis
+ClockPeriod: 4
+ClockUncertainty: 27%
+HLSConfig:
+  LayerName:
+    dense1:
+      Precision:
+        accum: int<48>
+        bias: int<16>
+        result: int<48>
+        weight: int<16>
+      ReuseFactor: 8
+      Strategy: Resource
+      Trace: false
+    dense2:
+      Precision:
+        accum: int<48>
+        bias: int<16>
+        result: int<48>
+        weight: int<16>
+      ReuseFactor: 8
+      Strategy: Resource
+      Trace: false
+    dense3:
+      Precision:
+        accum: int<48>
+        bias: int<16>
+        result: int<48>
+        weight: int<16>
+      ReuseFactor: 8
+      Strategy: Resource
+      Trace: false
+    input_layer:
+      Precision:
+        result: int<16>
+      Trace: false
+    relu1:
+      Precision:
+        param: auto
+        result: int<16>
+        table: fixed<18,8,TRN,WRAP,0>
+      ReuseFactor: 8
+      Strategy: Resource
+      TableSize: 1024
+      Trace: false
+    relu2:
+      Precision:
+        param: auto
+        result: int<16>
+        table: fixed<18,8,TRN,WRAP,0>
+      ReuseFactor: 8
+      Strategy: Resource
+      TableSize: 1024
+      Trace: false
+    relu3:
+      Precision:
+        param: auto
+        result: int<16>
+        table: fixed<18,8,TRN,WRAP,0>
+      ReuseFactor: 8
+      Strategy: Resource
+      TableSize: 1024
+      Trace: false
+  Model:
+    BitExact: null
+    BramFactor: 1000000000
+    Precision:
+      default: int<16>
+    ReuseFactor: 8
+    Strategy: Latency
+    TraceOutput: false
+IOType: io_parallel
+InputData: null
+InputShapes:
+  input_layer:
+  - 8
+KerasModel: !keras_model './SampleNeuralNets/Reuse8_Edited/keras_model.keras'
+OutputDir: ./SampleNeuralNets/Reuse8_Edited
+OutputPredictions: null
+OutputShapes:
+  layer7_out:
+  - 8
+Part: xc7z010clg400-1
+ProjectName: SampleNeuralNet
+Stamp: 2b9bae06
+Version: 1.0.0
+WriterConfig:
+  Namespace: null
+  TBOutputStream: both
+  WriteEmulationConstants: false
+  WriteTar: false
+  WriteWeightsTxt: true

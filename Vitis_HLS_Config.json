@@ -1,0 +1,85 @@
+{
+  "Model": {
+    "Precision": {
+      "default": "int<16>"
+    },
+    "ReuseFactor": 8,
+    "Strategy": "Latency",
+    "BramFactor": 1000000000,
+    "TraceOutput": false
+  },
+  "LayerName": {
+    "input_layer": {
+      "Trace": false,
+      "Precision": {
+        "result": "int<16>"
+      }
+    },
+    "dense1": {
+      "Trace": false,
+      "Precision": {
+        "result": "int<48>",
+        "weight": "int<16>",
+        "bias": "int<16>",
+        "accum": "int<48>"
+      },
+      "ReuseFactor": 8,
+      "Strategy": "Resource"
+    },
+    "relu1": {
+      "Trace": false,
+      "Precision": {
+        "result": "int<16>",
+        "param": "auto",
+        "table": "fixed<18,8,TRN,WRAP,0>"
+      },
+      "ReuseFactor": 8,
+      "TableSize": 1024,
+      "Strategy": "Resource"
+    },
+    "dense2": {
+      "Trace": false,
+      "Precision": {
+        "result": "int<48>",
+        "weight": "int<16>",
+        "bias": "int<16>",
+        "accum": "int<48>"
+      },
+      "ReuseFactor": 8,
+      "Strategy": "Resource"
+    },
+    "relu2": {
+      "Trace": false,
+      "Precision": {
+        "result": "int<16>",
+        "param": "auto",
+        "table": "fixed<18,8,TRN,WRAP,0>"
+      },
+      "ReuseFactor": 8,
+      "TableSize": 1024,
+      "Strategy": "Resource"
+    },
+    "dense3": {
+      "Trace": false,
+      "Precision": {
+        "result": "int<48>",
+        "weight": "int<16>",
+        "bias": "int<16>",
+        "accum": "int<48>"
+      },
+      "ReuseFactor": 8,
+      "Strategy": "Resource"
+    },
+    "relu3": {
+      "Trace": false,
+      "Precision": {
+        "result": "int<16>",
+        "param": "auto",
+        "table": "fixed<18,8,TRN,WRAP,0>"
+      },
+      "ReuseFactor": 8,
+      "TableSize": 1024,
+      "Strategy": "Resource"
+    }
+  }
+}
