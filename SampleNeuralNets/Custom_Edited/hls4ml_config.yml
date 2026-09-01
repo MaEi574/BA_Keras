@@ -82,7 +82,7 @@ OutputShapes:
   - 8
 Part: xc7z010clg400-1
 ProjectName: SampleNeuralNet
-Stamp: 18976e8b
+Stamp: 1c244f15
 Version: 1.0.0
 WriterConfig:
   Namespace: null
