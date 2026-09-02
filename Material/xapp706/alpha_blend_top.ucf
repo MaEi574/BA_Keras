@@ -1,0 +1,6 @@
+# This UCF file sets up a period constraint for the pixel clock at the alpha_blend_top level.
+# Since all inputs and outputs are registered, this fully constrains this block.
+# This becomes 2 constraints for the DCM produced clocks clk1x and clk2x.
+
+NET "pixclk" TNM_NET = "pixclk";
+TIMESPEC "TS_pixclk" = PERIOD "pixclk" 4.0 ns HIGH 50 %;
