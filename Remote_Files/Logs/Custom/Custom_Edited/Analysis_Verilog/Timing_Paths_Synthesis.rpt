@@ -1,0 +1,1077 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Tue Sep  1 23:40:36 2026
+| Host         : ei-lan-400 running 64-bit Debian GNU/Linux 12 (bookworm)
+| Command      : report_timing -max_paths 20 -file ./Analysis_Verilog/Timing_Paths_Synthesis.rpt
+| Design       : SampleNeuralNet
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -1.422ns  (required time - arrival time)
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer2_out_1_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.938ns  (logic 1.163ns (23.552%)  route 3.775ns (76.448%))
+  Logic Levels:           4  (LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_clk
+                         FDRE                                         r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/Q
+                         net (fo=11, unplaced)        1.011     2.480    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.775 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][47]_i_3/O
+                         net (fo=8, unplaced)         0.487     3.262    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][47]_i_1__6/O
+                         net (fo=104, unplaced)       0.550     3.936    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
+                         LUT4 (Prop_lut4_I3_O)        0.124     4.060 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
+                         net (fo=2, unplaced)         0.913     4.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.097 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.911    ap_sync_reg_channel_write_layer2_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer2_out_1_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer2_out_1_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer2_out_1_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.911    
+  -------------------------------------------------------------------
+                         slack                                 -1.422    
+
+Slack (VIOLATED) :        -1.422ns  (required time - arrival time)
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer2_out_2_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.938ns  (logic 1.163ns (23.552%)  route 3.775ns (76.448%))
+  Logic Levels:           4  (LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_clk
+                         FDRE                                         r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/Q
+                         net (fo=11, unplaced)        1.011     2.480    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.775 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][47]_i_3/O
+                         net (fo=8, unplaced)         0.487     3.262    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][47]_i_1__6/O
+                         net (fo=104, unplaced)       0.550     3.936    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
+                         LUT4 (Prop_lut4_I3_O)        0.124     4.060 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
+                         net (fo=2, unplaced)         0.913     4.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.097 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.911    ap_sync_reg_channel_write_layer2_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer2_out_2_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer2_out_2_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer2_out_2_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.911    
+  -------------------------------------------------------------------
+                         slack                                 -1.422    
+
+Slack (VIOLATED) :        -1.422ns  (required time - arrival time)
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer2_out_3_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.938ns  (logic 1.163ns (23.552%)  route 3.775ns (76.448%))
+  Logic Levels:           4  (LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_clk
+                         FDRE                                         r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/Q
+                         net (fo=11, unplaced)        1.011     2.480    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.775 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][47]_i_3/O
+                         net (fo=8, unplaced)         0.487     3.262    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][47]_i_1__6/O
+                         net (fo=104, unplaced)       0.550     3.936    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
+                         LUT4 (Prop_lut4_I3_O)        0.124     4.060 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
+                         net (fo=2, unplaced)         0.913     4.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.097 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.911    ap_sync_reg_channel_write_layer2_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer2_out_3_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer2_out_3_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer2_out_3_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.911    
+  -------------------------------------------------------------------
+                         slack                                 -1.422    
+
+Slack (VIOLATED) :        -1.422ns  (required time - arrival time)
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer2_out_4_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.938ns  (logic 1.163ns (23.552%)  route 3.775ns (76.448%))
+  Logic Levels:           4  (LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_clk
+                         FDRE                                         r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/Q
+                         net (fo=11, unplaced)        1.011     2.480    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.775 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][47]_i_3/O
+                         net (fo=8, unplaced)         0.487     3.262    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][47]_i_1__6/O
+                         net (fo=104, unplaced)       0.550     3.936    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
+                         LUT4 (Prop_lut4_I3_O)        0.124     4.060 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
+                         net (fo=2, unplaced)         0.913     4.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.097 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.911    ap_sync_reg_channel_write_layer2_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer2_out_4_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer2_out_4_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer2_out_4_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.911    
+  -------------------------------------------------------------------
+                         slack                                 -1.422    
+
+Slack (VIOLATED) :        -1.422ns  (required time - arrival time)
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer2_out_5_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.938ns  (logic 1.163ns (23.552%)  route 3.775ns (76.448%))
+  Logic Levels:           4  (LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_clk
+                         FDRE                                         r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/Q
+                         net (fo=11, unplaced)        1.011     2.480    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.775 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][47]_i_3/O
+                         net (fo=8, unplaced)         0.487     3.262    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][47]_i_1__6/O
+                         net (fo=104, unplaced)       0.550     3.936    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
+                         LUT4 (Prop_lut4_I3_O)        0.124     4.060 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
+                         net (fo=2, unplaced)         0.913     4.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.097 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.911    ap_sync_reg_channel_write_layer2_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer2_out_5_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer2_out_5_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer2_out_5_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.911    
+  -------------------------------------------------------------------
+                         slack                                 -1.422    
+
+Slack (VIOLATED) :        -1.422ns  (required time - arrival time)
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer2_out_6_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.938ns  (logic 1.163ns (23.552%)  route 3.775ns (76.448%))
+  Logic Levels:           4  (LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_clk
+                         FDRE                                         r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/Q
+                         net (fo=11, unplaced)        1.011     2.480    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.775 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][47]_i_3/O
+                         net (fo=8, unplaced)         0.487     3.262    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][47]_i_1__6/O
+                         net (fo=104, unplaced)       0.550     3.936    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
+                         LUT4 (Prop_lut4_I3_O)        0.124     4.060 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
+                         net (fo=2, unplaced)         0.913     4.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.097 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.911    ap_sync_reg_channel_write_layer2_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer2_out_6_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer2_out_6_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer2_out_6_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.911    
+  -------------------------------------------------------------------
+                         slack                                 -1.422    
+
+Slack (VIOLATED) :        -1.422ns  (required time - arrival time)
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer2_out_7_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.938ns  (logic 1.163ns (23.552%)  route 3.775ns (76.448%))
+  Logic Levels:           4  (LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_clk
+                         FDRE                                         r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/Q
+                         net (fo=11, unplaced)        1.011     2.480    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.775 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][47]_i_3/O
+                         net (fo=8, unplaced)         0.487     3.262    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][47]_i_1__6/O
+                         net (fo=104, unplaced)       0.550     3.936    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
+                         LUT4 (Prop_lut4_I3_O)        0.124     4.060 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
+                         net (fo=2, unplaced)         0.913     4.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.097 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.911    ap_sync_reg_channel_write_layer2_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer2_out_7_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer2_out_7_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer2_out_7_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.911    
+  -------------------------------------------------------------------
+                         slack                                 -1.422    
+
+Slack (VIOLATED) :        -1.422ns  (required time - arrival time)
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer2_out_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.938ns  (logic 1.163ns (23.552%)  route 3.775ns (76.448%))
+  Logic Levels:           4  (LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_clk
+                         FDRE                                         r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/Q
+                         net (fo=11, unplaced)        1.011     2.480    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.775 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][47]_i_3/O
+                         net (fo=8, unplaced)         0.487     3.262    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][47]_i_1__6/O
+                         net (fo=104, unplaced)       0.550     3.936    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
+                         LUT4 (Prop_lut4_I3_O)        0.124     4.060 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
+                         net (fo=2, unplaced)         0.913     4.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.097 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.911    ap_sync_reg_channel_write_layer2_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer2_out_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer2_out_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer2_out_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.911    
+  -------------------------------------------------------------------
+                         slack                                 -1.422    
+
+Slack (VIOLATED) :        -1.135ns  (required time - arrival time)
+  Source:                 ap_sync_reg_channel_write_layer6_out_4_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer6_out_1_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.651ns  (logic 1.157ns (24.876%)  route 3.494ns (75.124%))
+  Logic Levels:           4  (LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_4_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  ap_sync_reg_channel_write_layer6_out_4_reg/Q
+                         net (fo=5, unplaced)         0.769     2.238    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_4
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.533 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/SRL_SIG[0][47]_i_1__18/O
+                         net (fo=102, unplaced)       1.002     3.535    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/push_7
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.659 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2/O
+                         net (fo=1, unplaced)         0.449     4.108    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     4.232 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_2__2/O
+                         net (fo=2, unplaced)         0.460     4.692    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0_ap_continue
+                         LUT4 (Prop_lut4_I0_O)        0.118     4.810 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.624    ap_sync_reg_channel_write_layer6_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_1_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_1_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer6_out_1_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.624    
+  -------------------------------------------------------------------
+                         slack                                 -1.135    
+
+Slack (VIOLATED) :        -1.135ns  (required time - arrival time)
+  Source:                 ap_sync_reg_channel_write_layer6_out_4_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer6_out_2_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.651ns  (logic 1.157ns (24.876%)  route 3.494ns (75.124%))
+  Logic Levels:           4  (LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_4_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  ap_sync_reg_channel_write_layer6_out_4_reg/Q
+                         net (fo=5, unplaced)         0.769     2.238    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_4
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.533 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/SRL_SIG[0][47]_i_1__18/O
+                         net (fo=102, unplaced)       1.002     3.535    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/push_7
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.659 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2/O
+                         net (fo=1, unplaced)         0.449     4.108    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     4.232 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_2__2/O
+                         net (fo=2, unplaced)         0.460     4.692    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0_ap_continue
+                         LUT4 (Prop_lut4_I0_O)        0.118     4.810 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.624    ap_sync_reg_channel_write_layer6_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_2_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_2_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer6_out_2_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.624    
+  -------------------------------------------------------------------
+                         slack                                 -1.135    
+
+Slack (VIOLATED) :        -1.135ns  (required time - arrival time)
+  Source:                 ap_sync_reg_channel_write_layer6_out_4_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer6_out_3_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.651ns  (logic 1.157ns (24.876%)  route 3.494ns (75.124%))
+  Logic Levels:           4  (LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_4_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  ap_sync_reg_channel_write_layer6_out_4_reg/Q
+                         net (fo=5, unplaced)         0.769     2.238    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_4
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.533 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/SRL_SIG[0][47]_i_1__18/O
+                         net (fo=102, unplaced)       1.002     3.535    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/push_7
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.659 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2/O
+                         net (fo=1, unplaced)         0.449     4.108    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     4.232 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_2__2/O
+                         net (fo=2, unplaced)         0.460     4.692    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0_ap_continue
+                         LUT4 (Prop_lut4_I0_O)        0.118     4.810 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.624    ap_sync_reg_channel_write_layer6_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_3_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_3_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer6_out_3_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.624    
+  -------------------------------------------------------------------
+                         slack                                 -1.135    
+
+Slack (VIOLATED) :        -1.135ns  (required time - arrival time)
+  Source:                 ap_sync_reg_channel_write_layer6_out_4_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer6_out_4_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.651ns  (logic 1.157ns (24.876%)  route 3.494ns (75.124%))
+  Logic Levels:           4  (LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_4_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  ap_sync_reg_channel_write_layer6_out_4_reg/Q
+                         net (fo=5, unplaced)         0.769     2.238    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_4
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.533 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/SRL_SIG[0][47]_i_1__18/O
+                         net (fo=102, unplaced)       1.002     3.535    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/push_7
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.659 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2/O
+                         net (fo=1, unplaced)         0.449     4.108    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     4.232 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_2__2/O
+                         net (fo=2, unplaced)         0.460     4.692    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0_ap_continue
+                         LUT4 (Prop_lut4_I0_O)        0.118     4.810 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.624    ap_sync_reg_channel_write_layer6_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_4_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_4_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer6_out_4_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.624    
+  -------------------------------------------------------------------
+                         slack                                 -1.135    
+
+Slack (VIOLATED) :        -1.135ns  (required time - arrival time)
+  Source:                 ap_sync_reg_channel_write_layer6_out_4_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer6_out_5_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.651ns  (logic 1.157ns (24.876%)  route 3.494ns (75.124%))
+  Logic Levels:           4  (LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_4_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  ap_sync_reg_channel_write_layer6_out_4_reg/Q
+                         net (fo=5, unplaced)         0.769     2.238    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_4
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.533 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/SRL_SIG[0][47]_i_1__18/O
+                         net (fo=102, unplaced)       1.002     3.535    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/push_7
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.659 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2/O
+                         net (fo=1, unplaced)         0.449     4.108    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     4.232 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_2__2/O
+                         net (fo=2, unplaced)         0.460     4.692    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0_ap_continue
+                         LUT4 (Prop_lut4_I0_O)        0.118     4.810 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.624    ap_sync_reg_channel_write_layer6_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_5_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_5_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer6_out_5_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.624    
+  -------------------------------------------------------------------
+                         slack                                 -1.135    
+
+Slack (VIOLATED) :        -1.135ns  (required time - arrival time)
+  Source:                 ap_sync_reg_channel_write_layer6_out_4_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer6_out_6_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.651ns  (logic 1.157ns (24.876%)  route 3.494ns (75.124%))
+  Logic Levels:           4  (LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_4_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  ap_sync_reg_channel_write_layer6_out_4_reg/Q
+                         net (fo=5, unplaced)         0.769     2.238    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_4
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.533 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/SRL_SIG[0][47]_i_1__18/O
+                         net (fo=102, unplaced)       1.002     3.535    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/push_7
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.659 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2/O
+                         net (fo=1, unplaced)         0.449     4.108    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     4.232 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_2__2/O
+                         net (fo=2, unplaced)         0.460     4.692    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0_ap_continue
+                         LUT4 (Prop_lut4_I0_O)        0.118     4.810 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.624    ap_sync_reg_channel_write_layer6_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_6_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_6_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer6_out_6_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.624    
+  -------------------------------------------------------------------
+                         slack                                 -1.135    
+
+Slack (VIOLATED) :        -1.135ns  (required time - arrival time)
+  Source:                 ap_sync_reg_channel_write_layer6_out_4_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer6_out_7_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.651ns  (logic 1.157ns (24.876%)  route 3.494ns (75.124%))
+  Logic Levels:           4  (LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_4_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  ap_sync_reg_channel_write_layer6_out_4_reg/Q
+                         net (fo=5, unplaced)         0.769     2.238    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_4
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.533 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/SRL_SIG[0][47]_i_1__18/O
+                         net (fo=102, unplaced)       1.002     3.535    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/push_7
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.659 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2/O
+                         net (fo=1, unplaced)         0.449     4.108    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     4.232 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_2__2/O
+                         net (fo=2, unplaced)         0.460     4.692    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0_ap_continue
+                         LUT4 (Prop_lut4_I0_O)        0.118     4.810 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.624    ap_sync_reg_channel_write_layer6_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_7_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_7_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer6_out_7_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.624    
+  -------------------------------------------------------------------
+                         slack                                 -1.135    
+
+Slack (VIOLATED) :        -1.135ns  (required time - arrival time)
+  Source:                 ap_sync_reg_channel_write_layer6_out_4_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer6_out_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.651ns  (logic 1.157ns (24.876%)  route 3.494ns (75.124%))
+  Logic Levels:           4  (LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_4_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  ap_sync_reg_channel_write_layer6_out_4_reg/Q
+                         net (fo=5, unplaced)         0.769     2.238    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_4
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.533 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/SRL_SIG[0][47]_i_1__18/O
+                         net (fo=102, unplaced)       1.002     3.535    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/push_7
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.659 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2/O
+                         net (fo=1, unplaced)         0.449     4.108    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     4.232 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_2__2/O
+                         net (fo=2, unplaced)         0.460     4.692    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0_ap_continue
+                         LUT4 (Prop_lut4_I0_O)        0.118     4.810 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.624    ap_sync_reg_channel_write_layer6_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer6_out_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.624    
+  -------------------------------------------------------------------
+                         slack                                 -1.135    
+
+Slack (VIOLATED) :        -1.126ns  (required time - arrival time)
+  Source:                 ap_sync_reg_channel_write_layer4_out_4_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer4_out_1_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.642ns  (logic 1.157ns (24.925%)  route 3.485ns (75.075%))
+  Logic Levels:           4  (LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer4_out_4_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  ap_sync_reg_channel_write_layer4_out_4_reg/Q
+                         net (fo=3, unplaced)         0.759     2.228    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_4
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.523 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/SRL_SIG[0][47]_i_1__10/O
+                         net (fo=104, unplaced)       1.003     3.526    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/push_1
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.650 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_4__0/O
+                         net (fo=1, unplaced)         0.449     4.099    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_4__0_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     4.223 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_2__0/O
+                         net (fo=2, unplaced)         0.460     4.683    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0_ap_continue
+                         LUT4 (Prop_lut4_I0_O)        0.118     4.801 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.615    ap_sync_reg_channel_write_layer4_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer4_out_1_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer4_out_1_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer4_out_1_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.615    
+  -------------------------------------------------------------------
+                         slack                                 -1.126    
+
+Slack (VIOLATED) :        -1.126ns  (required time - arrival time)
+  Source:                 ap_sync_reg_channel_write_layer4_out_4_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer4_out_2_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.642ns  (logic 1.157ns (24.925%)  route 3.485ns (75.075%))
+  Logic Levels:           4  (LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer4_out_4_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  ap_sync_reg_channel_write_layer4_out_4_reg/Q
+                         net (fo=3, unplaced)         0.759     2.228    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_4
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.523 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/SRL_SIG[0][47]_i_1__10/O
+                         net (fo=104, unplaced)       1.003     3.526    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/push_1
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.650 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_4__0/O
+                         net (fo=1, unplaced)         0.449     4.099    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_4__0_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     4.223 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_2__0/O
+                         net (fo=2, unplaced)         0.460     4.683    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0_ap_continue
+                         LUT4 (Prop_lut4_I0_O)        0.118     4.801 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.615    ap_sync_reg_channel_write_layer4_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer4_out_2_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer4_out_2_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer4_out_2_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.615    
+  -------------------------------------------------------------------
+                         slack                                 -1.126    
+
+Slack (VIOLATED) :        -1.126ns  (required time - arrival time)
+  Source:                 ap_sync_reg_channel_write_layer4_out_4_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer4_out_3_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.642ns  (logic 1.157ns (24.925%)  route 3.485ns (75.075%))
+  Logic Levels:           4  (LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer4_out_4_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  ap_sync_reg_channel_write_layer4_out_4_reg/Q
+                         net (fo=3, unplaced)         0.759     2.228    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_4
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.523 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/SRL_SIG[0][47]_i_1__10/O
+                         net (fo=104, unplaced)       1.003     3.526    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/push_1
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.650 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_4__0/O
+                         net (fo=1, unplaced)         0.449     4.099    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_4__0_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     4.223 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_2__0/O
+                         net (fo=2, unplaced)         0.460     4.683    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0_ap_continue
+                         LUT4 (Prop_lut4_I0_O)        0.118     4.801 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.615    ap_sync_reg_channel_write_layer4_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer4_out_3_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer4_out_3_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer4_out_3_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.615    
+  -------------------------------------------------------------------
+                         slack                                 -1.126    
+
+Slack (VIOLATED) :        -1.126ns  (required time - arrival time)
+  Source:                 ap_sync_reg_channel_write_layer4_out_4_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_sync_reg_channel_write_layer4_out_4_reg/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        4.642ns  (logic 1.157ns (24.925%)  route 3.485ns (75.075%))
+  Logic Levels:           4  (LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.973     0.973    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer4_out_4_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  ap_sync_reg_channel_write_layer4_out_4_reg/Q
+                         net (fo=3, unplaced)         0.759     2.228    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_4
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.523 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/SRL_SIG[0][47]_i_1__10/O
+                         net (fo=104, unplaced)       1.003     3.526    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/push_1
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.650 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_4__0/O
+                         net (fo=1, unplaced)         0.449     4.099    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_4__0_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     4.223 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_2__0/O
+                         net (fo=2, unplaced)         0.460     4.683    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0_ap_continue
+                         LUT4 (Prop_lut4_I0_O)        0.118     4.801 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.615    ap_sync_reg_channel_write_layer4_out_7
+                         FDRE                                         r  ap_sync_reg_channel_write_layer4_out_4_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8555, unset)         0.924     4.924    ap_clk
+                         FDRE                                         r  ap_sync_reg_channel_write_layer4_out_4_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+                         FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer4_out_4_reg
+  -------------------------------------------------------------------
+                         required time                          4.489    
+                         arrival time                          -5.615    
+  -------------------------------------------------------------------
+                         slack                                 -1.126    
+
+
+
+

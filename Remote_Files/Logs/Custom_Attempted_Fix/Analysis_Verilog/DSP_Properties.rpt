@@ -1,0 +1,302 @@
+DSP48E1 count: 25
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_U3/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_U5/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_U6/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_U7/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_U8/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/dsp_48ns_32ns_64ns_25ns_30s_18ns_48ns_1s_48_5_1_U4/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/dsp_48ns_32ns_64ns_25ns_30s_18ns_48ns_1s_48_5_1_U9/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/dsp_48ns_32ns_64ns_25ns_30s_18s_48ns_1ns_48_5_1_U10/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18s_48ns_1ns_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/dsp_48ns_32ns_64ns_25ns_30s_18s_48ns_1ns_48_5_1_U17/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18s_48ns_1ns_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 1
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_U45/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_U47/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_U48/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_U51/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/dsp_48ns_32ns_64ns_25ns_30s_18ns_48ns_1s_48_5_1_U46/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/dsp_48ns_32ns_64ns_25ns_30s_18ns_48ns_1s_48_5_1_U49/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/dsp_48ns_32ns_64ns_25ns_30s_18s_48ns_1ns_48_5_1_U52/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18s_48ns_1ns_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/dsp_48ns_32ns_64ns_25ns_30s_18s_48ns_1ns_48_5_1_U59/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18s_48ns_1ns_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 1
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_U88/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_U90/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_U93/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_U94/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/dsp_48ns_32ns_64ns_25ns_30s_18ns_48ns_1s_48_5_1_U89/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/dsp_48ns_32ns_64ns_25ns_30s_18ns_48ns_1s_48_5_1_U91/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/dsp_48ns_32ns_64ns_25ns_30s_18s_48ns_1ns_48_5_1_U102/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18s_48ns_1ns_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 1
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/dsp_48ns_32ns_64ns_25ns_30s_18s_48ns_1ns_48_5_1_U95/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18s_48ns_1ns_48_5_1_DSP_Builtin_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+

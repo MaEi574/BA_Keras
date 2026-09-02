@@ -1,0 +1,45 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Wed Sep  2 03:14:33 2026
+| Host         : ei-lan-400 running 64-bit Debian GNU/Linux 12 (bookworm)
+| Command      : report_utilization -hierarchical -file ./Analysis/Utilization_Report_Synthesis.rpt
+| Design       : SampleNeuralNet
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|                                      Instance                                      |                                         Module                                        | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| SampleNeuralNet                                                                    |                                                                                 (top) |       5453 |       5277 |       0 |  176 | 7879 |      0 |      0 |         12 |
+|   (SampleNeuralNet)                                                                |                                                                                 (top) |         10 |         10 |       0 |    0 |  699 |      0 |      0 |          0 |
+|   grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114      |      SampleNeuralNet_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s |       1648 |       1599 |       0 |   49 | 2184 |      0 |      0 |          4 |
+|   grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132      |      SampleNeuralNet_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s |       1608 |       1544 |       0 |   64 | 2291 |      0 |      0 |          4 |
+|     (grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132)  |      SampleNeuralNet_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s |       1608 |       1544 |       0 |   64 | 2291 |      0 |      0 |          0 |
+|     mul_16s_15ns_30_4_0_U19                                                        |                                                   SampleNeuralNet_mul_16s_15ns_30_4_0 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          1 |
+|     mul_16s_15s_30_4_0_U17                                                         |                                                  SampleNeuralNet_mul_16s_15s_30_4_0_1 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          1 |
+|     mul_16s_15s_30_4_0_U20                                                         |                                                  SampleNeuralNet_mul_16s_15s_30_4_0_2 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          1 |
+|     mul_16s_15s_31_4_0_U18                                                         |                                                  SampleNeuralNet_mul_16s_15s_31_4_0_3 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          1 |
+|   grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156      |      SampleNeuralNet_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s |       1663 |       1600 |       0 |   63 | 2300 |      0 |      0 |          4 |
+|     (grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156)  |      SampleNeuralNet_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s |       1663 |       1600 |       0 |   63 | 2300 |      0 |      0 |          0 |
+|     mul_16s_15ns_31_4_0_U38                                                        |                                                   SampleNeuralNet_mul_16s_15ns_31_4_0 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          1 |
+|     mul_16s_15s_30_4_0_U39                                                         |                                                    SampleNeuralNet_mul_16s_15s_30_4_0 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          1 |
+|     mul_16s_15s_30_4_0_U41                                                         |                                                  SampleNeuralNet_mul_16s_15s_30_4_0_0 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          1 |
+|     mul_16s_15s_31_4_0_U40                                                         |                                                    SampleNeuralNet_mul_16s_15s_31_4_0 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          1 |
+|   grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config3_s_fu_120 | SampleNeuralNet_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config3_s |        176 |        176 |       0 |    0 |  135 |      0 |      0 |          0 |
+|   grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config5_s_fu_144 | SampleNeuralNet_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config5_s |        175 |        175 |       0 |    0 |  135 |      0 |      0 |          0 |
+|   grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168 | SampleNeuralNet_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s |        173 |        173 |       0 |    0 |  135 |      0 |      0 |          0 |
++------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+
+
