@@ -3,13 +3,15 @@
   **** SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Wed Sep  2 03:28:46 2026
+  **** Start of session at: Thu Sep  3 04:32:28 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source Analyze_Build.tcl
 # read_vhdl [glob ./SampleNeuralNet_prj/solution1/syn/vhdl/*.vhd]
-read_vhdl: Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1683.625 ; gain = 278.922 ; free physical = 84663 ; free virtual = 124460
+read_vhdl: Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1683.266 ; gain = 342.945 ; free physical = 85223 ; free virtual = 125531
+# read_xdc ./Analysis_Constraints.xdc
+# file mkdir ./Analysis
 # synth_design \
 #     -top SampleNeuralNet \
 #     -part xc7z010clg400-1 \
@@ -18,21 +20,23 @@ Command: synth_design -top SampleNeuralNet -part xc7z010clg400-1 -mode out_of_co
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Device 21-9227] Part: xc7z010clg400-1 does not have CEAM library.
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1309394
+INFO: [Synth 8-7075] Helper process launched with PID 1486703
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2118.184 ; gain = 425.652 ; free physical = 83880 ; free virtual = 123678
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2448.098 ; gain = 419.746 ; free physical = 84119 ; free virtual = 124438
 ---------------------------------------------------------------------------------
-ERROR: [Synth 8-2716] syntax error near ')' [/home/eim32828/Desktop/Vitis_HLS_Gens/SampleNeuralNets_1_9_v2/Custom_Edited/SampleNeuralNet_prj/solution1/syn/vhdl/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18ns_48ns_1s_48_5_1.vhd:12]
-INFO: [Synth 8-10443] VHDL file '/home/eim32828/Desktop/Vitis_HLS_Gens/SampleNeuralNets_1_9_v2/Custom_Edited/SampleNeuralNet_prj/solution1/syn/vhdl/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18ns_48ns_1s_48_5_1.vhd' is ignored due to errors
+ERROR: [Synth 8-2716] syntax error near ')' [/home/eim32828/Desktop/Vitis_HLS_Gens/SampleNeuralNets_1_9_v2_Custom/Custom_Edited/SampleNeuralNet_prj/solution1/syn/vhdl/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18ns_48ns_1s_48_5_1.vhd:12]
+INFO: [Synth 8-10443] VHDL file '/home/eim32828/Desktop/Vitis_HLS_Gens/SampleNeuralNets_1_9_v2_Custom/Custom_Edited/SampleNeuralNet_prj/solution1/syn/vhdl/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18ns_48ns_1s_48_5_1.vhd' is ignored due to errors
 ERROR: [Synth 8-439] module 'SampleNeuralNet' not found
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2192.121 ; gain = 499.590 ; free physical = 83797 ; free virtual = 123595
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2524.066 ; gain = 495.715 ; free physical = 84037 ; free virtual = 124356
 ---------------------------------------------------------------------------------
-synthesize failed
+RTL Elaboration failed
 INFO: [Common 17-83] Releasing license: Synthesis
-6 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+8 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
 synth_design failed
-ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
-INFO: [Common 17-206] Exiting Vivado at Wed Sep  2 03:29:24 2026...
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Thu Sep  3 04:33:10 2026...

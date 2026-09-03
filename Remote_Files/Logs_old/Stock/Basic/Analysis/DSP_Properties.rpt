@@ -1,0 +1,146 @@
+DSP48E1 count: 12
+
+--------------------------------------------------
+DSP: grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/mul_ln73_7_reg_2458_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 1
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/mul_ln73_8_reg_2478_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 1
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/mul_ln73_9_reg_2532_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 1
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/mul_ln73_reg_2448_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 1
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/mul_16s_15ns_30_4_0_U19/buff1_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 1
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/mul_16s_15s_30_4_0_U17/buff1_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 1
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/mul_16s_15s_30_4_0_U20/buff1_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 1
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/mul_16s_15s_31_4_0_U18/buff1_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 1
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/mul_16s_15ns_31_4_0_U38/buff1_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 1
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/mul_16s_15s_30_4_0_U39/buff1_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 1
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/mul_16s_15s_30_4_0_U41/buff1_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 1
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/mul_16s_15s_31_4_0_U40/buff1_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 1
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+

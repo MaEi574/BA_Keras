@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Wed Sep  2 01:10:38 2026
+| Date         : Thu Sep  3 04:39:11 2026
 | Host         : ei-lan-400 running 64-bit Debian GNU/Linux 12 (bookworm)
 | Command      : report_timing_summary -file ./Analysis_Verilog/Timing_Report_Implementation.rpt
 | Design       : SampleNeuralNet
@@ -138,7 +138,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-     -3.673    -3343.906                   3358                19021        0.070        0.000                      0                19021        0.557        0.000                       0                 10452  
+     -3.668    -4631.338                   4499                19009        0.053        0.000                      0                19009        0.557        0.000                       0                 10440  
 
 
 Timing constraints are not met.
@@ -161,7 +161,7 @@ ap_clk  {0.000 2.000}        4.000           250.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-ap_clk             -3.673    -3343.906                   3358                19021        0.070        0.000                      0                19021        0.557        0.000                       0                 10452  
+ap_clk             -3.668    -4631.338                   4499                19009        0.053        0.000                      0                19009        0.557        0.000                       0                 10440  
 
 
 ------------------------------------------------------------------------------------------------
@@ -192,24 +192,24 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  ap_clk
   To Clock:  ap_clk
 
-Setup :         3358  Failing Endpoints,  Worst Slack       -3.673ns,  Total Violation    -3343.906ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.070ns,  Total Violation        0.000ns
+Setup :         4499  Failing Endpoints,  Worst Slack       -3.668ns,  Total Violation    -4631.338ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.053ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        0.557ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (VIOLATED) :        -3.673ns  (required time - arrival time)
-  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_5_U/fifo_reg[17][49]_srl18/CLK
+Slack (VIOLATED) :        -3.668ns  (required time - arrival time)
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
                             (rising edge-triggered cell SRLC32E clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
-  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_7_U/fifo_rdPtr_reg[3]/D
-                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][18]_srl18/CE
+                            (rising edge-triggered cell SRLC32E clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.621ns  (logic 2.728ns (35.797%)  route 4.893ns (64.203%))
-  Logic Levels:           9  (LUT3=2 LUT4=2 LUT5=5)
+  Data Path Delay:        7.067ns  (logic 2.474ns (35.006%)  route 4.593ns (64.994%))
+  Logic Levels:           7  (LUT3=1 LUT4=2 LUT5=4)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -224,45 +224,42 @@ Slack (VIOLATED) :        -3.673ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=10451, unset)        0.973     0.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_5_U/ap_clk
-    SLICE_X24Y22         SRLC32E                                      r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_5_U/fifo_reg[17][49]_srl18/CLK
+                         net (fo=10439, unset)        0.973     0.973    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/ap_clk
+    SLICE_X12Y46         SRLC32E                                      r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
   -------------------------------------------------------------------    -------------------
-    SLICE_X24Y22         SRLC32E (Prop_srlc32e_CLK_Q)
-                                                      1.612     2.585 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_5_U/fifo_reg[17][49]_srl18/Q
-                         net (fo=4, routed)           0.477     3.062    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_5_U/fifo_reg[17][49]_srl18_n_0
-    SLICE_X25Y25         LUT4 (Prop_lut4_I3_O)        0.124     3.186 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_5_U/pf_done_INST_0/O
-                         net (fo=1, routed)           0.503     3.689    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_5_U_pf_done
-    SLICE_X19Y29         LUT4 (Prop_lut4_I3_O)        0.124     3.813 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U_i_51/O
-                         net (fo=1, routed)           0.596     4.409    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U_i_51_n_0
-    SLICE_X20Y29         LUT5 (Prop_lut5_I4_O)        0.124     4.533 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U_i_49/O
-                         net (fo=22, routed)          0.415     4.947    layer2_out_5_U/custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0_ap_done
-    SLICE_X19Y28         LUT5 (Prop_lut5_I4_O)        0.124     5.071 r  layer2_out_5_U/pf_ap_return_0_U_i_53/O
-                         net (fo=2, routed)           0.817     5.888    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/stalled_reg_0
-    SLICE_X18Y27         LUT5 (Prop_lut5_I2_O)        0.124     6.012 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U_i_50/O
-                         net (fo=24, routed)          0.789     6.802    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_7_U/pf_continue
-    SLICE_X23Y24         LUT5 (Prop_lut5_I4_O)        0.124     6.926 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_7_U/fifo_rdPtr[1]_i_3/O
-                         net (fo=1, routed)           0.263     7.189    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_7_U/fifo_rdPtr[1]_i_3_n_0
-    SLICE_X23Y24         LUT3 (Prop_lut3_I1_O)        0.124     7.313 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_7_U/fifo_rdPtr[1]_i_2/O
-                         net (fo=3, routed)           0.598     7.911    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_7_U/fifo_rdPtr13_out
-    SLICE_X23Y23         LUT3 (Prop_lut3_I2_O)        0.124     8.035 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_7_U/fifo_rdPtr[2]_i_3/O
-                         net (fo=3, routed)           0.435     8.470    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_7_U/fifo_rdPtr[2]_i_3_n_0
-    SLICE_X25Y24         LUT5 (Prop_lut5_I2_O)        0.124     8.594 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_7_U/fifo_rdPtr[3]_i_1/O
-                         net (fo=1, routed)           0.000     8.594    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_7_U/fifo_rdPtr[3]_i_1_n_0
-    SLICE_X25Y24         FDSE                                         r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_7_U/fifo_rdPtr_reg[3]/D
+    SLICE_X12Y46         SRLC32E (Prop_srlc32e_CLK_Q)
+                                                      1.606     2.579 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/Q
+                         net (fo=4, routed)           0.695     3.274    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18_n_0
+    SLICE_X15Y47         LUT4 (Prop_lut4_I2_O)        0.124     3.398 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/pf_done_INST_0/O
+                         net (fo=1, routed)           0.642     4.040    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U_pf_done
+    SLICE_X14Y45         LUT4 (Prop_lut4_I2_O)        0.124     4.164 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U_i_51/O
+                         net (fo=1, routed)           0.158     4.322    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U_i_51_n_0
+    SLICE_X14Y45         LUT5 (Prop_lut5_I4_O)        0.124     4.446 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U_i_49/O
+                         net (fo=22, routed)          0.499     4.945    layer2_out_3_U/custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0_ap_done
+    SLICE_X19Y46         LUT5 (Prop_lut5_I4_O)        0.124     5.069 r  layer2_out_3_U/pf_ap_return_0_U_i_52/O
+                         net (fo=2, routed)           0.517     5.586    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/stalled_reg
+    SLICE_X18Y46         LUT5 (Prop_lut5_I1_O)        0.124     5.710 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U_i_50/O
+                         net (fo=40, routed)          0.669     6.379    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/pf_continue
+    SLICE_X15Y44         LUT5 (Prop_lut5_I4_O)        0.124     6.503 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/stalled_i_1/O
+                         net (fo=6, routed)           0.529     7.032    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/must_stall
+    SLICE_X14Y37         LUT3 (Prop_lut3_I1_O)        0.124     7.156 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][0]_srl18_i_1/O
+                         net (fo=49, routed)          0.884     8.040    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/write_enable
+    SLICE_X10Y43         SRLC32E                                      r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][18]_srl18/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=10451, unset)        0.924     4.924    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_7_U/ap_clk
-    SLICE_X25Y24         FDSE                                         r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_7_U/fifo_rdPtr_reg[3]/C
+                         net (fo=10439, unset)        0.924     4.924    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/ap_clk
+    SLICE_X10Y43         SRLC32E                                      r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][18]_srl18/CLK
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
-    SLICE_X25Y24         FDSE (Setup_fdse_C_D)        0.032     4.921    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_7_U/fifo_rdPtr_reg[3]
+    SLICE_X10Y43         SRLC32E (Setup_srlc32e_CLK_CE)
+                                                     -0.517     4.372    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][18]_srl18
   -------------------------------------------------------------------
-                         required time                          4.921    
-                         arrival time                          -8.594    
+                         required time                          4.372    
+                         arrival time                          -8.040    
   -------------------------------------------------------------------
-                         slack                                 -3.673    
+                         slack                                 -3.668    
 
 
 
@@ -270,15 +267,15 @@ Slack (VIOLATED) :        -3.673ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.070ns  (arrival time - required time)
-  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/dspInit_reg_960_pp0_iter11_reg_reg[0]/C
+Slack (MET) :             0.053ns  (arrival time - required time)
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/tmp_5_reg_974_reg[15]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
-  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/dspInit_reg_960_pp0_iter14_reg_reg[0]_srl3/D
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/tmp_5_reg_974_pp0_iter9_reg_reg[15]_srl6/D
                             (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.209ns  (logic 0.141ns (67.454%)  route 0.068ns (32.546%))
+  Data Path Delay:        0.258ns  (logic 0.141ns (54.713%)  route 0.117ns (45.287%))
   Logic Levels:           0  
   Clock Path Skew:        0.022ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    0.432ns
@@ -289,26 +286,26 @@ Slack (MET) :             0.070ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=10451, unset)        0.410     0.410    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_clk
-    SLICE_X25Y55         FDRE                                         r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/dspInit_reg_960_pp0_iter11_reg_reg[0]/C
+                         net (fo=10439, unset)        0.410     0.410    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_clk
+    SLICE_X15Y60         FDRE                                         r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/tmp_5_reg_974_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X25Y55         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/dspInit_reg_960_pp0_iter11_reg_reg[0]/Q
-                         net (fo=2, routed)           0.068     0.619    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/dspInit_reg_960_pp0_iter11_reg
-    SLICE_X24Y55         SRL16E                                       r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/dspInit_reg_960_pp0_iter14_reg_reg[0]_srl3/D
+    SLICE_X15Y60         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/tmp_5_reg_974_reg[15]/Q
+                         net (fo=1, routed)           0.117     0.668    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/tmp_5_reg_974_reg_n_0_[15]
+    SLICE_X16Y60         SRL16E                                       r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/tmp_5_reg_974_pp0_iter9_reg_reg[15]_srl6/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=10451, unset)        0.432     0.432    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_clk
-    SLICE_X24Y55         SRL16E                                       r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/dspInit_reg_960_pp0_iter14_reg_reg[0]_srl3/CLK
+                         net (fo=10439, unset)        0.432     0.432    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_clk
+    SLICE_X16Y60         SRL16E                                       r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/tmp_5_reg_974_pp0_iter9_reg_reg[15]_srl6/CLK
                          clock pessimism              0.000     0.432    
-    SLICE_X24Y55         SRL16E (Hold_srl16e_CLK_D)
-                                                      0.117     0.549    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/dspInit_reg_960_pp0_iter14_reg_reg[0]_srl3
+    SLICE_X16Y60         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.183     0.615    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/tmp_5_reg_974_pp0_iter9_reg_reg[15]_srl6
   -------------------------------------------------------------------
-                         required time                         -0.549    
-                         arrival time                           0.619    
+                         required time                         -0.615    
+                         arrival time                           0.668    
   -------------------------------------------------------------------
-                         slack                                  0.070    
+                         slack                                  0.053    
 
 
 
@@ -322,9 +319,9 @@ Period(ns):         4.000
 Sources:            { ap_clk }
 
 Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
-Min Period        n/a     DSP48E1/CLK  n/a            3.443         4.000       0.557      DSP48_X0Y7    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_U3/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg/CLK
-Low Pulse Width   Slow    SRL16E/CLK   n/a            0.980         2.000       1.020      SLICE_X20Y36  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_loop_exit_ready_pp0_iter15_reg_reg_srl15/CLK
-High Pulse Width  Slow    SRL16E/CLK   n/a            0.980         2.000       1.020      SLICE_X20Y36  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_loop_exit_ready_pp0_iter15_reg_reg_srl15/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            3.443         4.000       0.557      DSP48_X0Y15   custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_U3/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30ns_18ns_48ns_1s_48_5_1_DSP_Builtin_U/p_reg_reg/CLK
+Low Pulse Width   Slow    SRL16E/CLK   n/a            0.980         2.000       1.020      SLICE_X16Y36  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_loop_exit_ready_pp0_iter15_reg_reg_srl15/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.980         2.000       1.020      SLICE_X16Y36  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_loop_exit_ready_pp0_iter15_reg_reg_srl15/CLK
 
 
 

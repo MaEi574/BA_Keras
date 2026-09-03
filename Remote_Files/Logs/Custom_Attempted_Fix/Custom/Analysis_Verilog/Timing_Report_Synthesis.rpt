@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Wed Sep  2 01:09:51 2026
+| Date         : Thu Sep  3 04:38:21 2026
 | Host         : ei-lan-400 running 64-bit Debian GNU/Linux 12 (bookworm)
 | Command      : report_timing_summary -file ./Analysis_Verilog/Timing_Report_Synthesis.rpt
 | Design       : SampleNeuralNet
@@ -138,7 +138,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-     -3.969    -2703.047                   1349                18998        0.203        0.000                      0                18998        0.557        0.000                       0                 10425  
+     -4.279    -3505.445                   1349                18998        0.203        0.000                      0                18998        0.557        0.000                       0                 10425  
 
 
 Timing constraints are not met.
@@ -161,7 +161,7 @@ ap_clk  {0.000 2.000}        4.000           250.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-ap_clk             -3.969    -2703.047                   1349                18998        0.203        0.000                      0                18998        0.557        0.000                       0                 10425  
+ap_clk             -4.279    -3505.445                   1349                18998        0.203        0.000                      0                18998        0.557        0.000                       0                 10425  
 
 
 ------------------------------------------------------------------------------------------------
@@ -192,7 +192,7 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  ap_clk
   To Clock:  ap_clk
 
-Setup :         1349  Failing Endpoints,  Worst Slack       -3.969ns,  Total Violation    -2703.047ns
+Setup :         1349  Failing Endpoints,  Worst Slack       -4.279ns,  Total Violation    -3505.445ns
 Hold  :            0  Failing Endpoints,  Worst Slack        0.203ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        0.557ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
@@ -200,16 +200,16 @@ PW    :            0  Failing Endpoints,  Worst Slack        0.557ns,  Total Vio
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (VIOLATED) :        -3.969ns  (required time - arrival time)
+Slack (VIOLATED) :        -4.279ns  (required time - arrival time)
   Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_3_U/fifo_rdPtr_reg[0]/C
                             (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
-  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/fifo_rdPtr_reg[2]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/fifo_reg[17][0]_srl18/CE
+                            (rising edge-triggered cell SRLC32E clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.947ns  (logic 1.933ns (24.324%)  route 6.014ns (75.676%))
-  Logic Levels:           10  (LUT3=1 LUT4=1 LUT5=6 LUT6=1 SRLC32E=1)
+  Data Path Delay:        7.683ns  (logic 1.659ns (21.593%)  route 6.024ns (78.407%))
+  Logic Levels:           8  (LUT4=2 LUT5=4 LUT6=1 SRLC32E=1)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -228,43 +228,40 @@ Slack (VIOLATED) :        -3.969ns  (required time - arrival time)
                          FDSE                                         r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_3_U/fifo_rdPtr_reg[0]/C
   -------------------------------------------------------------------    -------------------
                          FDSE (Prop_fdse_C_Q)         0.496     1.469 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_3_U/fifo_rdPtr_reg[0]/Q
-                         net (fo=58, unplaced)        0.892     2.361    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_3_U/fifo_rdPtr_reg[0]
+                         net (fo=61, unplaced)        0.893     2.362    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_3_U/fifo_rdPtr_reg[0]
                          SRLC32E (Prop_srlc32e_A[0]_Q)
-                                                      0.295     2.656 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_3_U/fifo_reg[17][49]_srl18/Q
-                         net (fo=4, unplaced)         0.443     3.099    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_3_U/fifo_reg[17][49]_srl18_n_0
-                         LUT5 (Prop_lut5_I3_O)        0.150     3.249 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_3_U/pf_done_INST_0/O
-                         net (fo=1, unplaced)         0.902     4.151    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_3_U_pf_done
-                         LUT4 (Prop_lut4_I1_O)        0.124     4.275 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U_i_51/O
-                         net (fo=1, unplaced)         0.449     4.724    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U_i_51_n_0
-                         LUT5 (Prop_lut5_I4_O)        0.124     4.848 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U_i_49/O
-                         net (fo=30, unplaced)        0.519     5.367    layer2_out_5_U/custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0_ap_done
-                         LUT5 (Prop_lut5_I4_O)        0.124     5.491 r  layer2_out_5_U/pf_ap_return_0_U_i_53/O
-                         net (fo=2, unplaced)         0.913     6.404    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/stalled_reg_0
-                         LUT5 (Prop_lut5_I2_O)        0.124     6.528 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U_i_50/O
-                         net (fo=24, unplaced)        0.513     7.041    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/pf_continue
-                         LUT5 (Prop_lut5_I4_O)        0.124     7.165 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/fifo_rdPtr[1]_i_3/O
-                         net (fo=1, unplaced)         0.449     7.614    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/fifo_rdPtr[1]_i_3_n_0
-                         LUT6 (Prop_lut6_I2_O)        0.124     7.738 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/fifo_rdPtr[1]_i_2/O
-                         net (fo=3, unplaced)         0.467     8.205    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/fifo_rdPtr13_out
-                         LUT3 (Prop_lut3_I2_O)        0.124     8.329 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/fifo_rdPtr[2]_i_3/O
-                         net (fo=3, unplaced)         0.467     8.796    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/fifo_rdPtr[2]_i_3_n_0
-                         LUT5 (Prop_lut5_I2_O)        0.124     8.920 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/fifo_rdPtr[2]_i_1/O
-                         net (fo=1, unplaced)         0.000     8.920    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/fifo_rdPtr[2]_i_1_n_0
-                         FDRE                                         r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/fifo_rdPtr_reg[2]/D
+                                                      0.295     2.657 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_3_U/fifo_reg[17][49]_srl18/Q
+                         net (fo=4, unplaced)         0.926     3.583    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_3_U/fifo_reg[17][49]_srl18_n_0
+                         LUT5 (Prop_lut5_I3_O)        0.124     3.707 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_3_U/pf_done_INST_0/O
+                         net (fo=1, unplaced)         0.902     4.609    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_3_U_pf_done
+                         LUT4 (Prop_lut4_I1_O)        0.124     4.733 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U_i_51/O
+                         net (fo=1, unplaced)         0.449     5.182    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U_i_51_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124     5.306 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U_i_49/O
+                         net (fo=30, unplaced)        0.519     5.825    layer2_out_5_U/custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0_ap_done
+                         LUT5 (Prop_lut5_I4_O)        0.124     5.949 r  layer2_out_5_U/pf_ap_return_0_U_i_53/O
+                         net (fo=2, unplaced)         0.913     6.862    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/stalled_reg_0
+                         LUT5 (Prop_lut5_I2_O)        0.124     6.986 f  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U_i_50/O
+                         net (fo=40, unplaced)        0.526     7.512    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/pf_continue
+                         LUT6 (Prop_lut6_I5_O)        0.124     7.636 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/stalled_i_1/O
+                         net (fo=6, unplaced)         0.481     8.117    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/must_stall
+                         LUT4 (Prop_lut4_I2_O)        0.124     8.241 r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/fifo_reg[17][0]_srl18_i_1/O
+                         net (fo=50, unplaced)        0.415     8.656    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/write_enable
+                         SRLC32E                                      r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/fifo_reg[17][0]_srl18/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
                          net (fo=10424, unset)        0.924     4.924    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/ap_clk
-                         FDRE                                         r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/fifo_rdPtr_reg[2]/C
+                         SRLC32E                                      r  custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/fifo_reg[17][0]_srl18/CLK
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
-                         FDRE (Setup_fdre_C_D)        0.062     4.951    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/fifo_rdPtr_reg[2]
+                         SRLC32E (Setup_srlc32e_CLK_CE)
+                                                     -0.512     4.377    custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_0_U/fifo_reg[17][0]_srl18
   -------------------------------------------------------------------
-                         required time                          4.951    
-                         arrival time                          -8.920    
+                         required time                          4.377    
+                         arrival time                          -8.656    
   -------------------------------------------------------------------
-                         slack                                 -3.969    
+                         slack                                 -4.279    
 
 
 

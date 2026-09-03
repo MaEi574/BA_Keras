@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Sun Aug 30 22:15:43 2026
+| Date         : Thu Sep  3 04:14:55 2026
 | Host         : ei-lan-400 running 64-bit Debian GNU/Linux 12 (bookworm)
 | Command      : report_timing -max_paths 20 -file ./Analysis/Timing_Paths_Synthesis.rpt
 | Design       : SampleNeuralNet
@@ -12,7 +12,7 @@ Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanc
 
 Timing Report
 
-Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
+Slack (VIOLATED) :        -1.416ns  (required time - arrival time)
   Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer2_out_1_reg/R
@@ -20,7 +20,7 @@ Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.930ns  (logic 1.163ns (23.590%)  route 3.767ns (76.410%))
+  Data Path Delay:        4.932ns  (logic 1.163ns (23.581%)  route 3.769ns (76.419%))
   Logic Levels:           4  (LUT4=1 LUT6=3)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
@@ -36,36 +36,36 @@ Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_clk
+                         net (fo=6593, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_clk
                          FDRE                                         r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.496     1.469 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/Q
-                         net (fo=11, unplaced)        1.011     2.480    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
-                         LUT6 (Prop_lut6_I0_O)        0.295     2.775 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_3/O
-                         net (fo=8, unplaced)         0.487     3.262    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
-                         LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_1__3/O
-                         net (fo=78, unplaced)        0.542     3.928    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
-                         LUT4 (Prop_lut4_I3_O)        0.124     4.052 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
-                         net (fo=2, unplaced)         0.913     4.965    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     5.089 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.903    ap_sync_reg_channel_write_layer2_out_7
+                         net (fo=12, unplaced)        1.013     2.482    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.777 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_3/O
+                         net (fo=8, unplaced)         0.487     3.264    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.388 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_1__3/O
+                         net (fo=78, unplaced)        0.542     3.930    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
+                         LUT4 (Prop_lut4_I3_O)        0.124     4.054 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
+                         net (fo=2, unplaced)         0.913     4.967    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.091 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.905    ap_sync_reg_channel_write_layer2_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer2_out_1_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer2_out_1_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer2_out_1_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.903    
+                         arrival time                          -5.905    
   -------------------------------------------------------------------
-                         slack                                 -1.414    
+                         slack                                 -1.416    
 
-Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
+Slack (VIOLATED) :        -1.416ns  (required time - arrival time)
   Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer2_out_2_reg/R
@@ -73,7 +73,7 @@ Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.930ns  (logic 1.163ns (23.590%)  route 3.767ns (76.410%))
+  Data Path Delay:        4.932ns  (logic 1.163ns (23.581%)  route 3.769ns (76.419%))
   Logic Levels:           4  (LUT4=1 LUT6=3)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
@@ -89,36 +89,36 @@ Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_clk
+                         net (fo=6593, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_clk
                          FDRE                                         r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.496     1.469 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/Q
-                         net (fo=11, unplaced)        1.011     2.480    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
-                         LUT6 (Prop_lut6_I0_O)        0.295     2.775 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_3/O
-                         net (fo=8, unplaced)         0.487     3.262    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
-                         LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_1__3/O
-                         net (fo=78, unplaced)        0.542     3.928    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
-                         LUT4 (Prop_lut4_I3_O)        0.124     4.052 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
-                         net (fo=2, unplaced)         0.913     4.965    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     5.089 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.903    ap_sync_reg_channel_write_layer2_out_7
+                         net (fo=12, unplaced)        1.013     2.482    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.777 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_3/O
+                         net (fo=8, unplaced)         0.487     3.264    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.388 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_1__3/O
+                         net (fo=78, unplaced)        0.542     3.930    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
+                         LUT4 (Prop_lut4_I3_O)        0.124     4.054 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
+                         net (fo=2, unplaced)         0.913     4.967    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.091 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.905    ap_sync_reg_channel_write_layer2_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer2_out_2_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer2_out_2_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer2_out_2_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.903    
+                         arrival time                          -5.905    
   -------------------------------------------------------------------
-                         slack                                 -1.414    
+                         slack                                 -1.416    
 
-Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
+Slack (VIOLATED) :        -1.416ns  (required time - arrival time)
   Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer2_out_3_reg/R
@@ -126,7 +126,7 @@ Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.930ns  (logic 1.163ns (23.590%)  route 3.767ns (76.410%))
+  Data Path Delay:        4.932ns  (logic 1.163ns (23.581%)  route 3.769ns (76.419%))
   Logic Levels:           4  (LUT4=1 LUT6=3)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
@@ -142,36 +142,36 @@ Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_clk
+                         net (fo=6593, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_clk
                          FDRE                                         r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.496     1.469 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/Q
-                         net (fo=11, unplaced)        1.011     2.480    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
-                         LUT6 (Prop_lut6_I0_O)        0.295     2.775 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_3/O
-                         net (fo=8, unplaced)         0.487     3.262    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
-                         LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_1__3/O
-                         net (fo=78, unplaced)        0.542     3.928    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
-                         LUT4 (Prop_lut4_I3_O)        0.124     4.052 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
-                         net (fo=2, unplaced)         0.913     4.965    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     5.089 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.903    ap_sync_reg_channel_write_layer2_out_7
+                         net (fo=12, unplaced)        1.013     2.482    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.777 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_3/O
+                         net (fo=8, unplaced)         0.487     3.264    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.388 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_1__3/O
+                         net (fo=78, unplaced)        0.542     3.930    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
+                         LUT4 (Prop_lut4_I3_O)        0.124     4.054 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
+                         net (fo=2, unplaced)         0.913     4.967    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.091 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.905    ap_sync_reg_channel_write_layer2_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer2_out_3_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer2_out_3_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer2_out_3_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.903    
+                         arrival time                          -5.905    
   -------------------------------------------------------------------
-                         slack                                 -1.414    
+                         slack                                 -1.416    
 
-Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
+Slack (VIOLATED) :        -1.416ns  (required time - arrival time)
   Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer2_out_4_reg/R
@@ -179,7 +179,7 @@ Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.930ns  (logic 1.163ns (23.590%)  route 3.767ns (76.410%))
+  Data Path Delay:        4.932ns  (logic 1.163ns (23.581%)  route 3.769ns (76.419%))
   Logic Levels:           4  (LUT4=1 LUT6=3)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
@@ -195,36 +195,36 @@ Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_clk
+                         net (fo=6593, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_clk
                          FDRE                                         r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.496     1.469 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/Q
-                         net (fo=11, unplaced)        1.011     2.480    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
-                         LUT6 (Prop_lut6_I0_O)        0.295     2.775 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_3/O
-                         net (fo=8, unplaced)         0.487     3.262    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
-                         LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_1__3/O
-                         net (fo=78, unplaced)        0.542     3.928    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
-                         LUT4 (Prop_lut4_I3_O)        0.124     4.052 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
-                         net (fo=2, unplaced)         0.913     4.965    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     5.089 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.903    ap_sync_reg_channel_write_layer2_out_7
+                         net (fo=12, unplaced)        1.013     2.482    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.777 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_3/O
+                         net (fo=8, unplaced)         0.487     3.264    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.388 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_1__3/O
+                         net (fo=78, unplaced)        0.542     3.930    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
+                         LUT4 (Prop_lut4_I3_O)        0.124     4.054 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
+                         net (fo=2, unplaced)         0.913     4.967    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.091 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.905    ap_sync_reg_channel_write_layer2_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer2_out_4_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer2_out_4_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer2_out_4_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.903    
+                         arrival time                          -5.905    
   -------------------------------------------------------------------
-                         slack                                 -1.414    
+                         slack                                 -1.416    
 
-Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
+Slack (VIOLATED) :        -1.416ns  (required time - arrival time)
   Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer2_out_5_reg/R
@@ -232,7 +232,7 @@ Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.930ns  (logic 1.163ns (23.590%)  route 3.767ns (76.410%))
+  Data Path Delay:        4.932ns  (logic 1.163ns (23.581%)  route 3.769ns (76.419%))
   Logic Levels:           4  (LUT4=1 LUT6=3)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
@@ -248,36 +248,36 @@ Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_clk
+                         net (fo=6593, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_clk
                          FDRE                                         r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.496     1.469 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/Q
-                         net (fo=11, unplaced)        1.011     2.480    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
-                         LUT6 (Prop_lut6_I0_O)        0.295     2.775 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_3/O
-                         net (fo=8, unplaced)         0.487     3.262    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
-                         LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_1__3/O
-                         net (fo=78, unplaced)        0.542     3.928    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
-                         LUT4 (Prop_lut4_I3_O)        0.124     4.052 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
-                         net (fo=2, unplaced)         0.913     4.965    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     5.089 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.903    ap_sync_reg_channel_write_layer2_out_7
+                         net (fo=12, unplaced)        1.013     2.482    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.777 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_3/O
+                         net (fo=8, unplaced)         0.487     3.264    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.388 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_1__3/O
+                         net (fo=78, unplaced)        0.542     3.930    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
+                         LUT4 (Prop_lut4_I3_O)        0.124     4.054 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
+                         net (fo=2, unplaced)         0.913     4.967    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.091 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.905    ap_sync_reg_channel_write_layer2_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer2_out_5_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer2_out_5_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer2_out_5_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.903    
+                         arrival time                          -5.905    
   -------------------------------------------------------------------
-                         slack                                 -1.414    
+                         slack                                 -1.416    
 
-Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
+Slack (VIOLATED) :        -1.416ns  (required time - arrival time)
   Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer2_out_6_reg/R
@@ -285,7 +285,7 @@ Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.930ns  (logic 1.163ns (23.590%)  route 3.767ns (76.410%))
+  Data Path Delay:        4.932ns  (logic 1.163ns (23.581%)  route 3.769ns (76.419%))
   Logic Levels:           4  (LUT4=1 LUT6=3)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
@@ -301,36 +301,36 @@ Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_clk
+                         net (fo=6593, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_clk
                          FDRE                                         r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.496     1.469 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/Q
-                         net (fo=11, unplaced)        1.011     2.480    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
-                         LUT6 (Prop_lut6_I0_O)        0.295     2.775 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_3/O
-                         net (fo=8, unplaced)         0.487     3.262    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
-                         LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_1__3/O
-                         net (fo=78, unplaced)        0.542     3.928    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
-                         LUT4 (Prop_lut4_I3_O)        0.124     4.052 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
-                         net (fo=2, unplaced)         0.913     4.965    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     5.089 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.903    ap_sync_reg_channel_write_layer2_out_7
+                         net (fo=12, unplaced)        1.013     2.482    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.777 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_3/O
+                         net (fo=8, unplaced)         0.487     3.264    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.388 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_1__3/O
+                         net (fo=78, unplaced)        0.542     3.930    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
+                         LUT4 (Prop_lut4_I3_O)        0.124     4.054 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
+                         net (fo=2, unplaced)         0.913     4.967    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.091 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.905    ap_sync_reg_channel_write_layer2_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer2_out_6_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer2_out_6_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer2_out_6_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.903    
+                         arrival time                          -5.905    
   -------------------------------------------------------------------
-                         slack                                 -1.414    
+                         slack                                 -1.416    
 
-Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
+Slack (VIOLATED) :        -1.416ns  (required time - arrival time)
   Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer2_out_7_reg/R
@@ -338,7 +338,7 @@ Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.930ns  (logic 1.163ns (23.590%)  route 3.767ns (76.410%))
+  Data Path Delay:        4.932ns  (logic 1.163ns (23.581%)  route 3.769ns (76.419%))
   Logic Levels:           4  (LUT4=1 LUT6=3)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
@@ -354,36 +354,36 @@ Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_clk
+                         net (fo=6593, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_clk
                          FDRE                                         r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.496     1.469 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/Q
-                         net (fo=11, unplaced)        1.011     2.480    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
-                         LUT6 (Prop_lut6_I0_O)        0.295     2.775 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_3/O
-                         net (fo=8, unplaced)         0.487     3.262    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
-                         LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_1__3/O
-                         net (fo=78, unplaced)        0.542     3.928    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
-                         LUT4 (Prop_lut4_I3_O)        0.124     4.052 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
-                         net (fo=2, unplaced)         0.913     4.965    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     5.089 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.903    ap_sync_reg_channel_write_layer2_out_7
+                         net (fo=12, unplaced)        1.013     2.482    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.777 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_3/O
+                         net (fo=8, unplaced)         0.487     3.264    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.388 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_1__3/O
+                         net (fo=78, unplaced)        0.542     3.930    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
+                         LUT4 (Prop_lut4_I3_O)        0.124     4.054 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
+                         net (fo=2, unplaced)         0.913     4.967    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.091 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.905    ap_sync_reg_channel_write_layer2_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer2_out_7_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer2_out_7_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer2_out_7_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.903    
+                         arrival time                          -5.905    
   -------------------------------------------------------------------
-                         slack                                 -1.414    
+                         slack                                 -1.416    
 
-Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
+Slack (VIOLATED) :        -1.416ns  (required time - arrival time)
   Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer2_out_reg/R
@@ -391,7 +391,7 @@ Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.930ns  (logic 1.163ns (23.590%)  route 3.767ns (76.410%))
+  Data Path Delay:        4.932ns  (logic 1.163ns (23.581%)  route 3.769ns (76.419%))
   Logic Levels:           4  (LUT4=1 LUT6=3)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
@@ -407,36 +407,36 @@ Slack (VIOLATED) :        -1.414ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_clk
+                         net (fo=6593, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_clk
                          FDRE                                         r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.496     1.469 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/Q
-                         net (fo=11, unplaced)        1.011     2.480    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
-                         LUT6 (Prop_lut6_I0_O)        0.295     2.775 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_3/O
-                         net (fo=8, unplaced)         0.487     3.262    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
-                         LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_1__3/O
-                         net (fo=78, unplaced)        0.542     3.928    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
-                         LUT4 (Prop_lut4_I3_O)        0.124     4.052 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
-                         net (fo=2, unplaced)         0.913     4.965    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     5.089 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.903    ap_sync_reg_channel_write_layer2_out_7
+                         net (fo=12, unplaced)        1.013     2.482    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.777 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_3/O
+                         net (fo=8, unplaced)         0.487     3.264    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_block_state1_pp0_stage0_iter0
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.388 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/SRL_SIG[0][34]_i_1__3/O
+                         net (fo=78, unplaced)        0.542     3.930    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_channel_write_layer2_out0
+                         LUT4 (Prop_lut4_I3_O)        0.124     4.054 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4/O
+                         net (fo=2, unplaced)         0.913     4.967    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_done_reg_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.091 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/flow_control_loop_pipe_U/ap_sync_reg_channel_write_layer2_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.905    ap_sync_reg_channel_write_layer2_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer2_out_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer2_out_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer2_out_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.903    
+                         arrival time                          -5.905    
   -------------------------------------------------------------------
-                         slack                                 -1.414    
+                         slack                                 -1.416    
 
-Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
+Slack (VIOLATED) :        -1.255ns  (required time - arrival time)
   Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer4_out_1_reg/R
@@ -444,7 +444,7 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.765ns  (logic 1.157ns (24.281%)  route 3.608ns (75.719%))
+  Data Path Delay:        4.771ns  (logic 1.163ns (24.376%)  route 3.608ns (75.624%))
   Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
@@ -460,7 +460,7 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    ap_clk
+                         net (fo=6593, unset)         0.973     0.973    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_3_reg/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.496     1.469 r  ap_sync_reg_channel_write_layer4_out_3_reg/Q
@@ -471,25 +471,25 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
                          net (fo=1, unplaced)         0.449     4.222    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_4__0_n_0
                          LUT6 (Prop_lut6_I5_O)        0.124     4.346 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_2__0/O
                          net (fo=2, unplaced)         0.460     4.806    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_continue50_out
-                         LUT4 (Prop_lut4_I0_O)        0.118     4.924 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.738    ap_sync_reg_channel_write_layer4_out_7
+                         LUT4 (Prop_lut4_I0_O)        0.124     4.930 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.744    ap_sync_reg_channel_write_layer4_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_1_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_1_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer4_out_1_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.738    
+                         arrival time                          -5.744    
   -------------------------------------------------------------------
-                         slack                                 -1.249    
+                         slack                                 -1.255    
 
-Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
+Slack (VIOLATED) :        -1.255ns  (required time - arrival time)
   Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer4_out_2_reg/R
@@ -497,7 +497,7 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.765ns  (logic 1.157ns (24.281%)  route 3.608ns (75.719%))
+  Data Path Delay:        4.771ns  (logic 1.163ns (24.376%)  route 3.608ns (75.624%))
   Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
@@ -513,7 +513,7 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    ap_clk
+                         net (fo=6593, unset)         0.973     0.973    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_3_reg/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.496     1.469 r  ap_sync_reg_channel_write_layer4_out_3_reg/Q
@@ -524,25 +524,25 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
                          net (fo=1, unplaced)         0.449     4.222    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_4__0_n_0
                          LUT6 (Prop_lut6_I5_O)        0.124     4.346 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_2__0/O
                          net (fo=2, unplaced)         0.460     4.806    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_continue50_out
-                         LUT4 (Prop_lut4_I0_O)        0.118     4.924 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.738    ap_sync_reg_channel_write_layer4_out_7
+                         LUT4 (Prop_lut4_I0_O)        0.124     4.930 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.744    ap_sync_reg_channel_write_layer4_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_2_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_2_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer4_out_2_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.738    
+                         arrival time                          -5.744    
   -------------------------------------------------------------------
-                         slack                                 -1.249    
+                         slack                                 -1.255    
 
-Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
+Slack (VIOLATED) :        -1.255ns  (required time - arrival time)
   Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer4_out_3_reg/R
@@ -550,7 +550,7 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.765ns  (logic 1.157ns (24.281%)  route 3.608ns (75.719%))
+  Data Path Delay:        4.771ns  (logic 1.163ns (24.376%)  route 3.608ns (75.624%))
   Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
@@ -566,7 +566,7 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    ap_clk
+                         net (fo=6593, unset)         0.973     0.973    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_3_reg/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.496     1.469 r  ap_sync_reg_channel_write_layer4_out_3_reg/Q
@@ -577,25 +577,25 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
                          net (fo=1, unplaced)         0.449     4.222    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_4__0_n_0
                          LUT6 (Prop_lut6_I5_O)        0.124     4.346 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_2__0/O
                          net (fo=2, unplaced)         0.460     4.806    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_continue50_out
-                         LUT4 (Prop_lut4_I0_O)        0.118     4.924 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.738    ap_sync_reg_channel_write_layer4_out_7
+                         LUT4 (Prop_lut4_I0_O)        0.124     4.930 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.744    ap_sync_reg_channel_write_layer4_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_3_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_3_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer4_out_3_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.738    
+                         arrival time                          -5.744    
   -------------------------------------------------------------------
-                         slack                                 -1.249    
+                         slack                                 -1.255    
 
-Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
+Slack (VIOLATED) :        -1.255ns  (required time - arrival time)
   Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer4_out_4_reg/R
@@ -603,7 +603,7 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.765ns  (logic 1.157ns (24.281%)  route 3.608ns (75.719%))
+  Data Path Delay:        4.771ns  (logic 1.163ns (24.376%)  route 3.608ns (75.624%))
   Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
@@ -619,7 +619,7 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    ap_clk
+                         net (fo=6593, unset)         0.973     0.973    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_3_reg/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.496     1.469 r  ap_sync_reg_channel_write_layer4_out_3_reg/Q
@@ -630,25 +630,25 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
                          net (fo=1, unplaced)         0.449     4.222    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_4__0_n_0
                          LUT6 (Prop_lut6_I5_O)        0.124     4.346 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_2__0/O
                          net (fo=2, unplaced)         0.460     4.806    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_continue50_out
-                         LUT4 (Prop_lut4_I0_O)        0.118     4.924 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.738    ap_sync_reg_channel_write_layer4_out_7
+                         LUT4 (Prop_lut4_I0_O)        0.124     4.930 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.744    ap_sync_reg_channel_write_layer4_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_4_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_4_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer4_out_4_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.738    
+                         arrival time                          -5.744    
   -------------------------------------------------------------------
-                         slack                                 -1.249    
+                         slack                                 -1.255    
 
-Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
+Slack (VIOLATED) :        -1.255ns  (required time - arrival time)
   Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer4_out_5_reg/R
@@ -656,7 +656,7 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.765ns  (logic 1.157ns (24.281%)  route 3.608ns (75.719%))
+  Data Path Delay:        4.771ns  (logic 1.163ns (24.376%)  route 3.608ns (75.624%))
   Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
@@ -672,7 +672,7 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    ap_clk
+                         net (fo=6593, unset)         0.973     0.973    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_3_reg/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.496     1.469 r  ap_sync_reg_channel_write_layer4_out_3_reg/Q
@@ -683,25 +683,25 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
                          net (fo=1, unplaced)         0.449     4.222    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_4__0_n_0
                          LUT6 (Prop_lut6_I5_O)        0.124     4.346 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_2__0/O
                          net (fo=2, unplaced)         0.460     4.806    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_continue50_out
-                         LUT4 (Prop_lut4_I0_O)        0.118     4.924 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.738    ap_sync_reg_channel_write_layer4_out_7
+                         LUT4 (Prop_lut4_I0_O)        0.124     4.930 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.744    ap_sync_reg_channel_write_layer4_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_5_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_5_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer4_out_5_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.738    
+                         arrival time                          -5.744    
   -------------------------------------------------------------------
-                         slack                                 -1.249    
+                         slack                                 -1.255    
 
-Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
+Slack (VIOLATED) :        -1.255ns  (required time - arrival time)
   Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer4_out_6_reg/R
@@ -709,7 +709,7 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.765ns  (logic 1.157ns (24.281%)  route 3.608ns (75.719%))
+  Data Path Delay:        4.771ns  (logic 1.163ns (24.376%)  route 3.608ns (75.624%))
   Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
@@ -725,7 +725,7 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    ap_clk
+                         net (fo=6593, unset)         0.973     0.973    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_3_reg/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.496     1.469 r  ap_sync_reg_channel_write_layer4_out_3_reg/Q
@@ -736,25 +736,25 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
                          net (fo=1, unplaced)         0.449     4.222    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_4__0_n_0
                          LUT6 (Prop_lut6_I5_O)        0.124     4.346 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_2__0/O
                          net (fo=2, unplaced)         0.460     4.806    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_continue50_out
-                         LUT4 (Prop_lut4_I0_O)        0.118     4.924 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.738    ap_sync_reg_channel_write_layer4_out_7
+                         LUT4 (Prop_lut4_I0_O)        0.124     4.930 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.744    ap_sync_reg_channel_write_layer4_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_6_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_6_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer4_out_6_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.738    
+                         arrival time                          -5.744    
   -------------------------------------------------------------------
-                         slack                                 -1.249    
+                         slack                                 -1.255    
 
-Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
+Slack (VIOLATED) :        -1.255ns  (required time - arrival time)
   Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer4_out_7_reg/R
@@ -762,7 +762,7 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.765ns  (logic 1.157ns (24.281%)  route 3.608ns (75.719%))
+  Data Path Delay:        4.771ns  (logic 1.163ns (24.376%)  route 3.608ns (75.624%))
   Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
@@ -778,7 +778,7 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    ap_clk
+                         net (fo=6593, unset)         0.973     0.973    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_3_reg/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.496     1.469 r  ap_sync_reg_channel_write_layer4_out_3_reg/Q
@@ -789,25 +789,25 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
                          net (fo=1, unplaced)         0.449     4.222    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_4__0_n_0
                          LUT6 (Prop_lut6_I5_O)        0.124     4.346 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_2__0/O
                          net (fo=2, unplaced)         0.460     4.806    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_continue50_out
-                         LUT4 (Prop_lut4_I0_O)        0.118     4.924 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.738    ap_sync_reg_channel_write_layer4_out_7
+                         LUT4 (Prop_lut4_I0_O)        0.124     4.930 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.744    ap_sync_reg_channel_write_layer4_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_7_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_7_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer4_out_7_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.738    
+                         arrival time                          -5.744    
   -------------------------------------------------------------------
-                         slack                                 -1.249    
+                         slack                                 -1.255    
 
-Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
+Slack (VIOLATED) :        -1.255ns  (required time - arrival time)
   Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer4_out_reg/R
@@ -815,7 +815,7 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.765ns  (logic 1.157ns (24.281%)  route 3.608ns (75.719%))
+  Data Path Delay:        4.771ns  (logic 1.163ns (24.376%)  route 3.608ns (75.624%))
   Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
@@ -831,7 +831,7 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    ap_clk
+                         net (fo=6593, unset)         0.973     0.973    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_3_reg/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.496     1.469 r  ap_sync_reg_channel_write_layer4_out_3_reg/Q
@@ -842,34 +842,34 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
                          net (fo=1, unplaced)         0.449     4.222    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_4__0_n_0
                          LUT6 (Prop_lut6_I5_O)        0.124     4.346 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_done_reg_inv_i_2__0/O
                          net (fo=2, unplaced)         0.460     4.806    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_continue50_out
-                         LUT4 (Prop_lut4_I0_O)        0.118     4.924 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.738    ap_sync_reg_channel_write_layer4_out_7
+                         LUT4 (Prop_lut4_I0_O)        0.124     4.930 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_sync_reg_channel_write_layer4_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.744    ap_sync_reg_channel_write_layer4_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer4_out_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer4_out_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.738    
+                         arrival time                          -5.744    
   -------------------------------------------------------------------
-                         slack                                 -1.249    
+                         slack                                 -1.255    
 
-Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
-  Source:                 ap_sync_reg_channel_write_layer6_out_3_reg/C
+Slack (VIOLATED) :        -1.164ns  (required time - arrival time)
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_reg_inv/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer6_out_1_reg/R
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.765ns  (logic 1.157ns (24.281%)  route 3.608ns (75.719%))
-  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=2)
+  Data Path Delay:        4.680ns  (logic 1.163ns (24.850%)  route 3.517ns (75.150%))
+  Logic Levels:           4  (LUT4=2 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -884,45 +884,45 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    ap_clk
-                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_3_reg/C
+                         net (fo=6593, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_clk
+                         FDRE                                         r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_reg_inv/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.496     1.469 r  ap_sync_reg_channel_write_layer6_out_3_reg/Q
-                         net (fo=3, unplaced)         0.983     2.452    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_3
-                         LUT6 (Prop_lut6_I0_O)        0.295     2.747 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_5__2/O
-                         net (fo=1, unplaced)         0.902     3.649    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_5__2_n_0
-                         LUT5 (Prop_lut5_I0_O)        0.124     3.773 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2/O
-                         net (fo=1, unplaced)         0.449     4.222    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2_n_0
-                         LUT6 (Prop_lut6_I5_O)        0.124     4.346 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_2__2/O
-                         net (fo=2, unplaced)         0.460     4.806    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_continue
-                         LUT4 (Prop_lut4_I0_O)        0.118     4.924 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.738    ap_sync_reg_channel_write_layer6_out_7
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_reg_inv/Q
+                         net (fo=489, unplaced)       0.881     2.350    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_block_pp0_stage0_subdone
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.645 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_7_i_1/O
+                         net (fo=2, unplaced)         0.913     3.558    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_channel_write_layer6_out_7
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.682 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_3__2/O
+                         net (fo=1, unplaced)         0.449     4.131    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_3__2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     4.255 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_2__2/O
+                         net (fo=2, unplaced)         0.460     4.715    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_continue
+                         LUT4 (Prop_lut4_I0_O)        0.124     4.839 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.653    ap_sync_reg_channel_write_layer6_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer6_out_1_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer6_out_1_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer6_out_1_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.738    
+                         arrival time                          -5.653    
   -------------------------------------------------------------------
-                         slack                                 -1.249    
+                         slack                                 -1.164    
 
-Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
-  Source:                 ap_sync_reg_channel_write_layer6_out_3_reg/C
+Slack (VIOLATED) :        -1.164ns  (required time - arrival time)
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_reg_inv/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer6_out_2_reg/R
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.765ns  (logic 1.157ns (24.281%)  route 3.608ns (75.719%))
-  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=2)
+  Data Path Delay:        4.680ns  (logic 1.163ns (24.850%)  route 3.517ns (75.150%))
+  Logic Levels:           4  (LUT4=2 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -937,45 +937,45 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    ap_clk
-                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_3_reg/C
+                         net (fo=6593, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_clk
+                         FDRE                                         r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_reg_inv/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.496     1.469 r  ap_sync_reg_channel_write_layer6_out_3_reg/Q
-                         net (fo=3, unplaced)         0.983     2.452    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_3
-                         LUT6 (Prop_lut6_I0_O)        0.295     2.747 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_5__2/O
-                         net (fo=1, unplaced)         0.902     3.649    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_5__2_n_0
-                         LUT5 (Prop_lut5_I0_O)        0.124     3.773 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2/O
-                         net (fo=1, unplaced)         0.449     4.222    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2_n_0
-                         LUT6 (Prop_lut6_I5_O)        0.124     4.346 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_2__2/O
-                         net (fo=2, unplaced)         0.460     4.806    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_continue
-                         LUT4 (Prop_lut4_I0_O)        0.118     4.924 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.738    ap_sync_reg_channel_write_layer6_out_7
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_reg_inv/Q
+                         net (fo=489, unplaced)       0.881     2.350    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_block_pp0_stage0_subdone
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.645 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_7_i_1/O
+                         net (fo=2, unplaced)         0.913     3.558    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_channel_write_layer6_out_7
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.682 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_3__2/O
+                         net (fo=1, unplaced)         0.449     4.131    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_3__2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     4.255 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_2__2/O
+                         net (fo=2, unplaced)         0.460     4.715    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_continue
+                         LUT4 (Prop_lut4_I0_O)        0.124     4.839 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.653    ap_sync_reg_channel_write_layer6_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer6_out_2_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer6_out_2_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer6_out_2_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.738    
+                         arrival time                          -5.653    
   -------------------------------------------------------------------
-                         slack                                 -1.249    
+                         slack                                 -1.164    
 
-Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
-  Source:                 ap_sync_reg_channel_write_layer6_out_3_reg/C
+Slack (VIOLATED) :        -1.164ns  (required time - arrival time)
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_reg_inv/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer6_out_3_reg/R
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.765ns  (logic 1.157ns (24.281%)  route 3.608ns (75.719%))
-  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=2)
+  Data Path Delay:        4.680ns  (logic 1.163ns (24.850%)  route 3.517ns (75.150%))
+  Logic Levels:           4  (LUT4=2 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -990,45 +990,45 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    ap_clk
-                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_3_reg/C
+                         net (fo=6593, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_clk
+                         FDRE                                         r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_reg_inv/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.496     1.469 r  ap_sync_reg_channel_write_layer6_out_3_reg/Q
-                         net (fo=3, unplaced)         0.983     2.452    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_3
-                         LUT6 (Prop_lut6_I0_O)        0.295     2.747 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_5__2/O
-                         net (fo=1, unplaced)         0.902     3.649    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_5__2_n_0
-                         LUT5 (Prop_lut5_I0_O)        0.124     3.773 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2/O
-                         net (fo=1, unplaced)         0.449     4.222    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2_n_0
-                         LUT6 (Prop_lut6_I5_O)        0.124     4.346 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_2__2/O
-                         net (fo=2, unplaced)         0.460     4.806    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_continue
-                         LUT4 (Prop_lut4_I0_O)        0.118     4.924 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.738    ap_sync_reg_channel_write_layer6_out_7
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_reg_inv/Q
+                         net (fo=489, unplaced)       0.881     2.350    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_block_pp0_stage0_subdone
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.645 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_7_i_1/O
+                         net (fo=2, unplaced)         0.913     3.558    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_channel_write_layer6_out_7
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.682 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_3__2/O
+                         net (fo=1, unplaced)         0.449     4.131    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_3__2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     4.255 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_2__2/O
+                         net (fo=2, unplaced)         0.460     4.715    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_continue
+                         LUT4 (Prop_lut4_I0_O)        0.124     4.839 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.653    ap_sync_reg_channel_write_layer6_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer6_out_3_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer6_out_3_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer6_out_3_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.738    
+                         arrival time                          -5.653    
   -------------------------------------------------------------------
-                         slack                                 -1.249    
+                         slack                                 -1.164    
 
-Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
-  Source:                 ap_sync_reg_channel_write_layer6_out_3_reg/C
+Slack (VIOLATED) :        -1.164ns  (required time - arrival time)
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_reg_inv/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Destination:            ap_sync_reg_channel_write_layer6_out_4_reg/R
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.765ns  (logic 1.157ns (24.281%)  route 3.608ns (75.719%))
-  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=2)
+  Data Path Delay:        4.680ns  (logic 1.163ns (24.850%)  route 3.517ns (75.150%))
+  Logic Levels:           4  (LUT4=2 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -1043,34 +1043,34 @@ Slack (VIOLATED) :        -1.249ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.973     0.973    ap_clk
-                         FDRE                                         r  ap_sync_reg_channel_write_layer6_out_3_reg/C
+                         net (fo=6593, unset)         0.973     0.973    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_clk
+                         FDRE                                         r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_reg_inv/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.496     1.469 r  ap_sync_reg_channel_write_layer6_out_3_reg/Q
-                         net (fo=3, unplaced)         0.983     2.452    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_3
-                         LUT6 (Prop_lut6_I0_O)        0.295     2.747 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_5__2/O
-                         net (fo=1, unplaced)         0.902     3.649    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_5__2_n_0
-                         LUT5 (Prop_lut5_I0_O)        0.124     3.773 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2/O
-                         net (fo=1, unplaced)         0.449     4.222    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_4__2_n_0
-                         LUT6 (Prop_lut6_I5_O)        0.124     4.346 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_2__2/O
-                         net (fo=2, unplaced)         0.460     4.806    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_continue
-                         LUT4 (Prop_lut4_I0_O)        0.118     4.924 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_6_i_1/O
-                         net (fo=8, unplaced)         0.814     5.738    ap_sync_reg_channel_write_layer6_out_7
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_reg_inv/Q
+                         net (fo=489, unplaced)       0.881     2.350    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_block_pp0_stage0_subdone
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.645 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_7_i_1/O
+                         net (fo=2, unplaced)         0.913     3.558    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_channel_write_layer6_out_7
+                         LUT6 (Prop_lut6_I2_O)        0.124     3.682 f  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_3__2/O
+                         net (fo=1, unplaced)         0.449     4.131    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_3__2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     4.255 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_done_reg_inv_i_2__2/O
+                         net (fo=2, unplaced)         0.460     4.715    dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_continue
+                         LUT4 (Prop_lut4_I0_O)        0.124     4.839 r  dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_sync_reg_channel_write_layer6_out_6_i_1/O
+                         net (fo=8, unplaced)         0.814     5.653    ap_sync_reg_channel_write_layer6_out_7
                          FDRE                                         r  ap_sync_reg_channel_write_layer6_out_4_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     4.000     4.000 r  
                                                       0.000     4.000 r  ap_clk (IN)
-                         net (fo=6637, unset)         0.924     4.924    ap_clk
+                         net (fo=6593, unset)         0.924     4.924    ap_clk
                          FDRE                                         r  ap_sync_reg_channel_write_layer6_out_4_reg/C
                          clock pessimism              0.000     4.924    
                          clock uncertainty           -0.035     4.889    
                          FDRE (Setup_fdre_C_R)       -0.400     4.489    ap_sync_reg_channel_write_layer6_out_4_reg
   -------------------------------------------------------------------
                          required time                          4.489    
-                         arrival time                          -5.738    
+                         arrival time                          -5.653    
   -------------------------------------------------------------------
-                         slack                                 -1.249    
+                         slack                                 -1.164    
 
 
 

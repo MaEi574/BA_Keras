@@ -1,0 +1,290 @@
+DSP48E1 count: 24
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U3/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_35_4_1_U2/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_35_4_1_U4/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_35_4_1_U5/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_35_4_1_U6/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_35_4_1_U7/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_5s_23s_24_4_1_U9/SampleNeuralNet_mac_muladd_16s_5s_23s_24_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 2
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_34_4_1_U26/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_34_4_1_U29/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_35_4_1_U25/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_35_4_1_U27/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_35_4_1_U28/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_35_4_1_U30/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_35_4_1_U31/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_5s_23s_24_4_1_U32/SampleNeuralNet_mac_muladd_16s_5s_23s_24_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/mac_muladd_16s_16s_34s_34_4_1_U53/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/mac_muladd_16s_16s_34s_34_4_1_U55/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/mac_muladd_16s_16s_34s_35_4_1_U52/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/mac_muladd_16s_16s_34s_35_4_1_U54/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/mac_muladd_16s_16s_34s_35_4_1_U56/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/mac_muladd_16s_16s_34s_35_4_1_U57/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/mac_muladd_16s_16s_34s_35_4_1_U58/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+
+--------------------------------------------------
+DSP: dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/mac_muladd_16s_5s_23s_24_4_1_U59/SampleNeuralNet_mac_muladd_16s_5s_23s_24_4_1_DSP48_0_U/p_reg_reg
+AREG = 2
+BREG = 1
+MREG = 1
+PREG = 1
+CREG = 0
+OPMODEREG = 0
+ALUMODEREG = 0
+USE_MULT = MULTIPLY
+PRIMITIVE_TYPE = MULT.dsp.DSP48E1
+

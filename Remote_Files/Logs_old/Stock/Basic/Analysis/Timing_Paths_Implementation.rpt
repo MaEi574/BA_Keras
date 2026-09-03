@@ -1,0 +1,1253 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Wed Sep  2 03:15:22 2026
+| Host         : ei-lan-400 running 64-bit Debian GNU/Linux 12 (bookworm)
+| Command      : report_timing -max_paths 20 -file ./Analysis/Timing_Paths_Implementation.rpt
+| Design       : SampleNeuralNet
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.012ns  (required time - arrival time)
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            layer6_out_4_reg_581_reg[28]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.979ns  (logic 2.133ns (53.610%)  route 1.846ns (46.390%))
+  Logic Levels:           7  (CARRY4=5 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_clk
+    SLICE_X23Y88         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y88         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/Q
+                         net (fo=1, routed)           1.122     2.551    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753[10]
+    SLICE_X36Y91         LUT2 (Prop_lut2_I1_O)        0.124     2.675 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg[12]_i_4__1/O
+                         net (fo=1, routed)           0.000     2.675    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg[12]_i_4__1_n_0
+    SLICE_X36Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     3.225 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[12]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.225    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[12]_i_1__1_n_0
+    SLICE_X36Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.339 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[16]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.339    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[16]_i_1__1_n_0
+    SLICE_X36Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.453 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[20]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.453    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[20]_i_1__1_n_0
+    SLICE_X36Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.567 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[24]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.567    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[24]_i_1__1_n_0
+    SLICE_X36Y95         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     3.896 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[28]_i_1__1/O[3]
+                         net (fo=2, routed)           0.724     4.620    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[28]_i_1__1_n_4
+    SLICE_X39Y98         LUT3 (Prop_lut3_I0_O)        0.332     4.952 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/layer6_out_4_reg_581[28]_i_1/O
+                         net (fo=1, routed)           0.000     4.952    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156_ap_return_4[28]
+    SLICE_X39Y98         FDRE                                         r  layer6_out_4_reg_581_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    ap_clk
+    SLICE_X39Y98         FDRE                                         r  layer6_out_4_reg_581_reg[28]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X39Y98         FDRE (Setup_fdre_C_D)        0.075     4.964    layer6_out_4_reg_581_reg[28]
+  -------------------------------------------------------------------
+                         required time                          4.964    
+                         arrival time                          -4.952    
+  -------------------------------------------------------------------
+                         slack                                  0.012    
+
+Slack (MET) :             0.019ns  (required time - arrival time)
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            layer2_out_3_reg_416_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.974ns  (logic 2.447ns (61.568%)  route 1.527ns (38.432%))
+  Logic Levels:           10  (CARRY4=8 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_clk
+    SLICE_X11Y37         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y37         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733_reg[0]/Q
+                         net (fo=1, routed)           0.763     2.192    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733[0]
+    SLICE_X9Y42          LUT2 (Prop_lut2_I1_O)        0.124     2.316 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg[3]_i_5/O
+                         net (fo=1, routed)           0.000     2.316    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg[3]_i_5_n_0
+    SLICE_X9Y42          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     2.848 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     2.848    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[3]_i_1_n_0
+    SLICE_X9Y43          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.962 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     2.962    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[7]_i_1_n_0
+    SLICE_X9Y44          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.076 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.076    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[11]_i_1_n_0
+    SLICE_X9Y45          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.190 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.190    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[15]_i_1_n_0
+    SLICE_X9Y46          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.304 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.304    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[19]_i_1_n_0
+    SLICE_X9Y47          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.418 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.418    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[23]_i_1_n_0
+    SLICE_X9Y48          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.532 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.532    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[27]_i_1_n_0
+    SLICE_X9Y49          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.348     3.880 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[31]_i_1/O[1]
+                         net (fo=2, routed)           0.764     4.644    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_119_fu_2158_p2__0[29]
+    SLICE_X6Y51          LUT3 (Prop_lut3_I0_O)        0.303     4.947 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/layer2_out_3_reg_416[29]_i_1/O
+                         net (fo=1, routed)           0.000     4.947    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114_ap_return_3[29]
+    SLICE_X6Y51          FDRE                                         r  layer2_out_3_reg_416_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    ap_clk
+    SLICE_X6Y51          FDRE                                         r  layer2_out_3_reg_416_reg[29]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X6Y51          FDRE (Setup_fdre_C_D)        0.077     4.966    layer2_out_3_reg_416_reg[29]
+  -------------------------------------------------------------------
+                         required time                          4.966    
+                         arrival time                          -4.947    
+  -------------------------------------------------------------------
+                         slack                                  0.019    
+
+Slack (MET) :             0.044ns  (required time - arrival time)
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            layer6_out_4_reg_581_reg[26]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.947ns  (logic 2.116ns (53.616%)  route 1.831ns (46.384%))
+  Logic Levels:           7  (CARRY4=5 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_clk
+    SLICE_X23Y88         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y88         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/Q
+                         net (fo=1, routed)           1.122     2.551    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753[10]
+    SLICE_X36Y91         LUT2 (Prop_lut2_I1_O)        0.124     2.675 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg[12]_i_4__1/O
+                         net (fo=1, routed)           0.000     2.675    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg[12]_i_4__1_n_0
+    SLICE_X36Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     3.225 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[12]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.225    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[12]_i_1__1_n_0
+    SLICE_X36Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.339 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[16]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.339    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[16]_i_1__1_n_0
+    SLICE_X36Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.453 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[20]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.453    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[20]_i_1__1_n_0
+    SLICE_X36Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.567 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[24]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.567    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[24]_i_1__1_n_0
+    SLICE_X36Y95         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.348     3.915 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[28]_i_1__1/O[1]
+                         net (fo=2, routed)           0.708     4.624    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[28]_i_1__1_n_6
+    SLICE_X36Y99         LUT3 (Prop_lut3_I0_O)        0.296     4.920 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/layer6_out_4_reg_581[26]_i_1/O
+                         net (fo=1, routed)           0.000     4.920    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156_ap_return_4[26]
+    SLICE_X36Y99         FDRE                                         r  layer6_out_4_reg_581_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    ap_clk
+    SLICE_X36Y99         FDRE                                         r  layer6_out_4_reg_581_reg[26]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X36Y99         FDRE (Setup_fdre_C_D)        0.075     4.964    layer6_out_4_reg_581_reg[26]
+  -------------------------------------------------------------------
+                         required time                          4.964    
+                         arrival time                          -4.920    
+  -------------------------------------------------------------------
+                         slack                                  0.044    
+
+Slack (MET) :             0.074ns  (required time - arrival time)
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            layer6_out_4_reg_581_reg[35]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.917ns  (logic 2.230ns (56.924%)  route 1.687ns (43.076%))
+  Logic Levels:           8  (CARRY4=6 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_clk
+    SLICE_X23Y88         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y88         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/Q
+                         net (fo=1, routed)           1.122     2.551    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753[10]
+    SLICE_X36Y91         LUT2 (Prop_lut2_I1_O)        0.124     2.675 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg[12]_i_4__1/O
+                         net (fo=1, routed)           0.000     2.675    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg[12]_i_4__1_n_0
+    SLICE_X36Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     3.225 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[12]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.225    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[12]_i_1__1_n_0
+    SLICE_X36Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.339 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[16]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.339    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[16]_i_1__1_n_0
+    SLICE_X36Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.453 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[20]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.453    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[20]_i_1__1_n_0
+    SLICE_X36Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.567 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[24]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.567    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[24]_i_1__1_n_0
+    SLICE_X36Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.681 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[28]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.681    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[28]_i_1__1_n_0
+    SLICE_X36Y96         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.348     4.029 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[35]_i_1__1/O[1]
+                         net (fo=2, routed)           0.565     4.594    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[35]_i_1__1_n_6
+    SLICE_X36Y98         LUT3 (Prop_lut3_I0_O)        0.296     4.890 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/layer6_out_4_reg_581[35]_i_1/O
+                         net (fo=1, routed)           0.000     4.890    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156_ap_return_4[35]
+    SLICE_X36Y98         FDRE                                         r  layer6_out_4_reg_581_reg[35]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    ap_clk
+    SLICE_X36Y98         FDRE                                         r  layer6_out_4_reg_581_reg[35]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X36Y98         FDRE (Setup_fdre_C_D)        0.075     4.964    layer6_out_4_reg_581_reg[35]
+  -------------------------------------------------------------------
+                         required time                          4.964    
+                         arrival time                          -4.890    
+  -------------------------------------------------------------------
+                         slack                                  0.074    
+
+Slack (MET) :             0.097ns  (required time - arrival time)
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            layer6_out_4_reg_581_reg[25]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.851ns  (logic 2.006ns (52.085%)  route 1.845ns (47.915%))
+  Logic Levels:           7  (CARRY4=5 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_clk
+    SLICE_X23Y88         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y88         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/Q
+                         net (fo=1, routed)           1.122     2.551    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753[10]
+    SLICE_X36Y91         LUT2 (Prop_lut2_I1_O)        0.124     2.675 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg[12]_i_4__1/O
+                         net (fo=1, routed)           0.000     2.675    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg[12]_i_4__1_n_0
+    SLICE_X36Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     3.225 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[12]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.225    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[12]_i_1__1_n_0
+    SLICE_X36Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.339 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[16]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.339    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[16]_i_1__1_n_0
+    SLICE_X36Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.453 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[20]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.453    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[20]_i_1__1_n_0
+    SLICE_X36Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.567 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[24]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.567    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[24]_i_1__1_n_0
+    SLICE_X36Y95         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.235     3.802 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[28]_i_1__1/O[0]
+                         net (fo=2, routed)           0.723     4.525    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[28]_i_1__1_n_7
+    SLICE_X36Y99         LUT3 (Prop_lut3_I0_O)        0.299     4.824 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/layer6_out_4_reg_581[25]_i_1/O
+                         net (fo=1, routed)           0.000     4.824    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156_ap_return_4[25]
+    SLICE_X36Y99         FDRE                                         r  layer6_out_4_reg_581_reg[25]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    ap_clk
+    SLICE_X36Y99         FDRE                                         r  layer6_out_4_reg_581_reg[25]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X36Y99         FDRE (Setup_fdre_C_D)        0.032     4.921    layer6_out_4_reg_581_reg[25]
+  -------------------------------------------------------------------
+                         required time                          4.921    
+                         arrival time                          -4.824    
+  -------------------------------------------------------------------
+                         slack                                  0.097    
+
+Slack (MET) :             0.108ns  (required time - arrival time)
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            layer6_out_4_reg_581_reg[27]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.839ns  (logic 2.030ns (52.882%)  route 1.809ns (47.118%))
+  Logic Levels:           7  (CARRY4=5 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_clk
+    SLICE_X23Y88         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y88         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/Q
+                         net (fo=1, routed)           1.122     2.551    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753[10]
+    SLICE_X36Y91         LUT2 (Prop_lut2_I1_O)        0.124     2.675 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg[12]_i_4__1/O
+                         net (fo=1, routed)           0.000     2.675    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg[12]_i_4__1_n_0
+    SLICE_X36Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     3.225 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[12]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.225    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[12]_i_1__1_n_0
+    SLICE_X36Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.339 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[16]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.339    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[16]_i_1__1_n_0
+    SLICE_X36Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.453 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[20]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.453    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[20]_i_1__1_n_0
+    SLICE_X36Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.567 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[24]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.567    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[24]_i_1__1_n_0
+    SLICE_X36Y95         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     3.823 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[28]_i_1__1/O[2]
+                         net (fo=2, routed)           0.687     4.510    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[28]_i_1__1_n_5
+    SLICE_X39Y98         LUT3 (Prop_lut3_I0_O)        0.302     4.812 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/layer6_out_4_reg_581[27]_i_1/O
+                         net (fo=1, routed)           0.000     4.812    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156_ap_return_4[27]
+    SLICE_X39Y98         FDRE                                         r  layer6_out_4_reg_581_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    ap_clk
+    SLICE_X39Y98         FDRE                                         r  layer6_out_4_reg_581_reg[27]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X39Y98         FDRE (Setup_fdre_C_D)        0.031     4.920    layer6_out_4_reg_581_reg[27]
+  -------------------------------------------------------------------
+                         required time                          4.920    
+                         arrival time                          -4.812    
+  -------------------------------------------------------------------
+                         slack                                  0.108    
+
+Slack (MET) :             0.120ns  (required time - arrival time)
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            layer6_out_4_reg_581_reg[24]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.871ns  (logic 2.019ns (52.161%)  route 1.852ns (47.839%))
+  Logic Levels:           6  (CARRY4=4 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_clk
+    SLICE_X23Y88         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y88         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/Q
+                         net (fo=1, routed)           1.122     2.551    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753[10]
+    SLICE_X36Y91         LUT2 (Prop_lut2_I1_O)        0.124     2.675 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg[12]_i_4__1/O
+                         net (fo=1, routed)           0.000     2.675    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg[12]_i_4__1_n_0
+    SLICE_X36Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     3.225 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[12]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.225    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[12]_i_1__1_n_0
+    SLICE_X36Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.339 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[16]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.339    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[16]_i_1__1_n_0
+    SLICE_X36Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.453 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[20]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.453    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[20]_i_1__1_n_0
+    SLICE_X36Y94         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     3.782 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[24]_i_1__1/O[3]
+                         net (fo=2, routed)           0.730     4.512    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[24]_i_1__1_n_4
+    SLICE_X39Y91         LUT3 (Prop_lut3_I0_O)        0.332     4.844 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/layer6_out_4_reg_581[24]_i_1/O
+                         net (fo=1, routed)           0.000     4.844    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156_ap_return_4[24]
+    SLICE_X39Y91         FDRE                                         r  layer6_out_4_reg_581_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    ap_clk
+    SLICE_X39Y91         FDRE                                         r  layer6_out_4_reg_581_reg[24]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X39Y91         FDRE (Setup_fdre_C_D)        0.075     4.964    layer6_out_4_reg_581_reg[24]
+  -------------------------------------------------------------------
+                         required time                          4.964    
+                         arrival time                          -4.844    
+  -------------------------------------------------------------------
+                         slack                                  0.120    
+
+Slack (MET) :             0.126ns  (required time - arrival time)
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            layer6_out_4_reg_581_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.822ns  (logic 2.120ns (55.465%)  route 1.702ns (44.535%))
+  Logic Levels:           8  (CARRY4=6 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_clk
+    SLICE_X23Y88         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y88         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/Q
+                         net (fo=1, routed)           1.122     2.551    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753[10]
+    SLICE_X36Y91         LUT2 (Prop_lut2_I1_O)        0.124     2.675 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg[12]_i_4__1/O
+                         net (fo=1, routed)           0.000     2.675    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg[12]_i_4__1_n_0
+    SLICE_X36Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     3.225 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[12]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.225    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[12]_i_1__1_n_0
+    SLICE_X36Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.339 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[16]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.339    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[16]_i_1__1_n_0
+    SLICE_X36Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.453 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[20]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.453    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[20]_i_1__1_n_0
+    SLICE_X36Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.567 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[24]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.567    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[24]_i_1__1_n_0
+    SLICE_X36Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.681 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[28]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.681    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[28]_i_1__1_n_0
+    SLICE_X36Y96         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.235     3.916 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[35]_i_1__1/O[0]
+                         net (fo=2, routed)           0.580     4.496    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[35]_i_1__1_n_7
+    SLICE_X36Y98         LUT3 (Prop_lut3_I0_O)        0.299     4.795 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/layer6_out_4_reg_581[29]_i_1/O
+                         net (fo=1, routed)           0.000     4.795    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156_ap_return_4[29]
+    SLICE_X36Y98         FDRE                                         r  layer6_out_4_reg_581_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    ap_clk
+    SLICE_X36Y98         FDRE                                         r  layer6_out_4_reg_581_reg[29]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X36Y98         FDRE (Setup_fdre_C_D)        0.032     4.921    layer6_out_4_reg_581_reg[29]
+  -------------------------------------------------------------------
+                         required time                          4.921    
+                         arrival time                          -4.795    
+  -------------------------------------------------------------------
+                         slack                                  0.126    
+
+Slack (MET) :             0.137ns  (required time - arrival time)
+  Source:                 input_layer_ap_vld_preg_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/icmp_ln551_4_reg_350_reg[0]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.574ns  (logic 0.580ns (16.230%)  route 2.994ns (83.770%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    ap_clk
+    SLICE_X21Y72         FDRE                                         r  input_layer_ap_vld_preg_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X21Y72         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  input_layer_ap_vld_preg_reg/Q
+                         net (fo=20, routed)          0.835     2.264    grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/input_layer_ap_vld_preg
+    SLICE_X24Y66         LUT3 (Prop_lut3_I1_O)        0.124     2.388 r  grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/ap_ce_reg_i_1/O
+                         net (fo=1410, routed)        2.159     4.547    grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/ap_enable_reg_pp0_iter11
+    SLICE_X37Y99         FDRE                                         r  grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/icmp_ln551_4_reg_350_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/ap_clk
+    SLICE_X37Y99         FDRE                                         r  grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/icmp_ln551_4_reg_350_reg[0]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X37Y99         FDRE (Setup_fdre_C_CE)      -0.205     4.684    grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/icmp_ln551_4_reg_350_reg[0]
+  -------------------------------------------------------------------
+                         required time                          4.684    
+                         arrival time                          -4.547    
+  -------------------------------------------------------------------
+                         slack                                  0.137    
+
+Slack (MET) :             0.137ns  (required time - arrival time)
+  Source:                 input_layer_ap_vld_preg_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/trunc_ln552_4_reg_355_reg[7]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.574ns  (logic 0.580ns (16.230%)  route 2.994ns (83.770%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    ap_clk
+    SLICE_X21Y72         FDRE                                         r  input_layer_ap_vld_preg_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X21Y72         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  input_layer_ap_vld_preg_reg/Q
+                         net (fo=20, routed)          0.835     2.264    grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/input_layer_ap_vld_preg
+    SLICE_X24Y66         LUT3 (Prop_lut3_I1_O)        0.124     2.388 r  grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/ap_ce_reg_i_1/O
+                         net (fo=1410, routed)        2.159     4.547    grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/ap_enable_reg_pp0_iter11
+    SLICE_X37Y99         FDRE                                         r  grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/trunc_ln552_4_reg_355_reg[7]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/ap_clk
+    SLICE_X37Y99         FDRE                                         r  grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/trunc_ln552_4_reg_355_reg[7]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X37Y99         FDRE (Setup_fdre_C_CE)      -0.205     4.684    grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/trunc_ln552_4_reg_355_reg[7]
+  -------------------------------------------------------------------
+                         required time                          4.684    
+                         arrival time                          -4.547    
+  -------------------------------------------------------------------
+                         slack                                  0.137    
+
+Slack (MET) :             0.149ns  (required time - arrival time)
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            layer2_out_3_reg_416_reg[26]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.885ns  (logic 2.266ns (58.334%)  route 1.619ns (41.666%))
+  Logic Levels:           9  (CARRY4=7 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_clk
+    SLICE_X11Y37         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y37         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733_reg[0]/Q
+                         net (fo=1, routed)           0.763     2.192    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733[0]
+    SLICE_X9Y42          LUT2 (Prop_lut2_I1_O)        0.124     2.316 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg[3]_i_5/O
+                         net (fo=1, routed)           0.000     2.316    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg[3]_i_5_n_0
+    SLICE_X9Y42          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     2.848 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     2.848    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[3]_i_1_n_0
+    SLICE_X9Y43          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.962 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     2.962    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[7]_i_1_n_0
+    SLICE_X9Y44          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.076 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.076    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[11]_i_1_n_0
+    SLICE_X9Y45          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.190 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.190    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[15]_i_1_n_0
+    SLICE_X9Y46          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.304 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.304    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[19]_i_1_n_0
+    SLICE_X9Y47          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.418 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.418    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[23]_i_1_n_0
+    SLICE_X9Y48          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     3.674 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[27]_i_1/O[2]
+                         net (fo=2, routed)           0.856     4.530    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_119_fu_2158_p2__0[26]
+    SLICE_X6Y51          LUT3 (Prop_lut3_I0_O)        0.328     4.858 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/layer2_out_3_reg_416[26]_i_1/O
+                         net (fo=1, routed)           0.000     4.858    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114_ap_return_3[26]
+    SLICE_X6Y51          FDRE                                         r  layer2_out_3_reg_416_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    ap_clk
+    SLICE_X6Y51          FDRE                                         r  layer2_out_3_reg_416_reg[26]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X6Y51          FDRE (Setup_fdre_C_D)        0.118     5.007    layer2_out_3_reg_416_reg[26]
+  -------------------------------------------------------------------
+                         required time                          5.007    
+                         arrival time                          -4.858    
+  -------------------------------------------------------------------
+                         slack                                  0.149    
+
+Slack (MET) :             0.162ns  (required time - arrival time)
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/data_6_val_read_reg_2266_pp0_iter2_reg_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_8_reg_2556_reg[27]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.816ns  (logic 1.868ns (48.956%)  route 1.948ns (51.044%))
+  Logic Levels:           6  (CARRY4=5 LUT2=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_clk
+    SLICE_X24Y85         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/data_6_val_read_reg_2266_pp0_iter2_reg_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X24Y85         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/data_6_val_read_reg_2266_pp0_iter2_reg_reg[0]/Q
+                         net (fo=18, routed)          1.948     3.439    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/data_6_val_read_reg_2266_pp0_iter2_reg[0]
+    SLICE_X35Y95         LUT2 (Prop_lut2_I0_O)        0.124     3.563 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_8_reg_2556[13]_i_4/O
+                         net (fo=1, routed)           0.000     3.563    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_8_reg_2556[13]_i_4_n_0
+    SLICE_X35Y95         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.113 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_8_reg_2556_reg[13]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     4.113    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_8_reg_2556_reg[13]_i_1_n_0
+    SLICE_X35Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.227 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_8_reg_2556_reg[17]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     4.227    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_8_reg_2556_reg[17]_i_1_n_0
+    SLICE_X35Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.341 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_8_reg_2556_reg[21]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     4.341    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_8_reg_2556_reg[21]_i_1_n_0
+    SLICE_X35Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.455 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_8_reg_2556_reg[25]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     4.455    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_8_reg_2556_reg[25]_i_1_n_0
+    SLICE_X35Y99         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     4.789 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_8_reg_2556_reg[27]_i_1/O[1]
+                         net (fo=1, routed)           0.000     4.789    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_8_fu_1678_p2[27]
+    SLICE_X35Y99         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_8_reg_2556_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_clk
+    SLICE_X35Y99         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_8_reg_2556_reg[27]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X35Y99         FDRE (Setup_fdre_C_D)        0.062     4.951    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_8_reg_2556_reg[27]
+  -------------------------------------------------------------------
+                         required time                          4.951    
+                         arrival time                          -4.789    
+  -------------------------------------------------------------------
+                         slack                                  0.162    
+
+Slack (MET) :             0.165ns  (required time - arrival time)
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            layer6_out_4_reg_581_reg[21]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.782ns  (logic 1.892ns (50.022%)  route 1.890ns (49.978%))
+  Logic Levels:           6  (CARRY4=4 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_clk
+    SLICE_X23Y88         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y88         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753_reg[10]/Q
+                         net (fo=1, routed)           1.122     2.551    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln58_26_reg_2753[10]
+    SLICE_X36Y91         LUT2 (Prop_lut2_I1_O)        0.124     2.675 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg[12]_i_4__1/O
+                         net (fo=1, routed)           0.000     2.675    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg[12]_i_4__1_n_0
+    SLICE_X36Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     3.225 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[12]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.225    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[12]_i_1__1_n_0
+    SLICE_X36Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.339 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[16]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.339    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[16]_i_1__1_n_0
+    SLICE_X36Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.453 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[20]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.000     3.453    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[20]_i_1__1_n_0
+    SLICE_X36Y94         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.235     3.688 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[24]_i_1__1/O[0]
+                         net (fo=2, routed)           0.768     4.456    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_return_4_int_reg_reg[24]_i_1__1_n_7
+    SLICE_X41Y99         LUT3 (Prop_lut3_I0_O)        0.299     4.755 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/layer6_out_4_reg_581[21]_i_1/O
+                         net (fo=1, routed)           0.000     4.755    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156_ap_return_4[21]
+    SLICE_X41Y99         FDRE                                         r  layer6_out_4_reg_581_reg[21]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    ap_clk
+    SLICE_X41Y99         FDRE                                         r  layer6_out_4_reg_581_reg[21]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X41Y99         FDRE (Setup_fdre_C_D)        0.031     4.920    layer6_out_4_reg_581_reg[21]
+  -------------------------------------------------------------------
+                         required time                          4.920    
+                         arrival time                          -4.755    
+  -------------------------------------------------------------------
+                         slack                                  0.165    
+
+Slack (MET) :             0.166ns  (required time - arrival time)
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/tmp_9_reg_2348_reg[27]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln73_1_reg_2404_reg[28]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.812ns  (logic 1.453ns (38.117%)  route 2.359ns (61.883%))
+  Logic Levels:           3  (CARRY4=2 LUT2=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_clk
+    SLICE_X1Y88          FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/tmp_9_reg_2348_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y88          FDRE (Prop_fdre_C_Q)         0.419     1.392 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/tmp_9_reg_2348_reg[27]/Q
+                         net (fo=22, routed)          2.359     3.751    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/tmp_9_reg_2348[27]
+    SLICE_X26Y92         LUT2 (Prop_lut2_I1_O)        0.299     4.050 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln73_1_reg_2404[26]_i_3/O
+                         net (fo=1, routed)           0.000     4.050    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln73_1_reg_2404[26]_i_3_n_0
+    SLICE_X26Y92         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     4.451 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln73_1_reg_2404_reg[26]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     4.451    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln73_1_reg_2404_reg[26]_i_1_n_0
+    SLICE_X26Y93         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     4.785 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln73_1_reg_2404_reg[28]_i_1/O[1]
+                         net (fo=1, routed)           0.000     4.785    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln73_1_fu_1304_p2[28]
+    SLICE_X26Y93         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln73_1_reg_2404_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/ap_clk
+    SLICE_X26Y93         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln73_1_reg_2404_reg[28]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X26Y93         FDRE (Setup_fdre_C_D)        0.062     4.951    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config6_s_fu_156/add_ln73_1_reg_2404_reg[28]
+  -------------------------------------------------------------------
+                         required time                          4.951    
+                         arrival time                          -4.785    
+  -------------------------------------------------------------------
+                         slack                                  0.166    
+
+Slack (MET) :             0.166ns  (required time - arrival time)
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            layer2_out_3_reg_416_reg[28]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.868ns  (logic 2.359ns (60.991%)  route 1.509ns (39.009%))
+  Logic Levels:           10  (CARRY4=8 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_clk
+    SLICE_X11Y37         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y37         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733_reg[0]/Q
+                         net (fo=1, routed)           0.763     2.192    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733[0]
+    SLICE_X9Y42          LUT2 (Prop_lut2_I1_O)        0.124     2.316 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg[3]_i_5/O
+                         net (fo=1, routed)           0.000     2.316    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg[3]_i_5_n_0
+    SLICE_X9Y42          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     2.848 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     2.848    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[3]_i_1_n_0
+    SLICE_X9Y43          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.962 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     2.962    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[7]_i_1_n_0
+    SLICE_X9Y44          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.076 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.076    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[11]_i_1_n_0
+    SLICE_X9Y45          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.190 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.190    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[15]_i_1_n_0
+    SLICE_X9Y46          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.304 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.304    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[19]_i_1_n_0
+    SLICE_X9Y47          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.418 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.418    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[23]_i_1_n_0
+    SLICE_X9Y48          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.532 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.532    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[27]_i_1_n_0
+    SLICE_X9Y49          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.235     3.767 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[31]_i_1/O[0]
+                         net (fo=2, routed)           0.746     4.513    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_119_fu_2158_p2__0[28]
+    SLICE_X6Y51          LUT3 (Prop_lut3_I0_O)        0.328     4.841 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/layer2_out_3_reg_416[28]_i_1/O
+                         net (fo=1, routed)           0.000     4.841    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114_ap_return_3[28]
+    SLICE_X6Y51          FDRE                                         r  layer2_out_3_reg_416_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    ap_clk
+    SLICE_X6Y51          FDRE                                         r  layer2_out_3_reg_416_reg[28]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X6Y51          FDRE (Setup_fdre_C_D)        0.118     5.007    layer2_out_3_reg_416_reg[28]
+  -------------------------------------------------------------------
+                         required time                          5.007    
+                         arrival time                          -4.841    
+  -------------------------------------------------------------------
+                         slack                                  0.166    
+
+Slack (MET) :             0.174ns  (required time - arrival time)
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            layer2_out_3_reg_416_reg[25]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.821ns  (logic 2.333ns (61.061%)  route 1.488ns (38.939%))
+  Logic Levels:           9  (CARRY4=7 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_clk
+    SLICE_X11Y37         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y37         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733_reg[0]/Q
+                         net (fo=1, routed)           0.763     2.192    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733[0]
+    SLICE_X9Y42          LUT2 (Prop_lut2_I1_O)        0.124     2.316 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg[3]_i_5/O
+                         net (fo=1, routed)           0.000     2.316    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg[3]_i_5_n_0
+    SLICE_X9Y42          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     2.848 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     2.848    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[3]_i_1_n_0
+    SLICE_X9Y43          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.962 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     2.962    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[7]_i_1_n_0
+    SLICE_X9Y44          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.076 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.076    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[11]_i_1_n_0
+    SLICE_X9Y45          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.190 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.190    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[15]_i_1_n_0
+    SLICE_X9Y46          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.304 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.304    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[19]_i_1_n_0
+    SLICE_X9Y47          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.418 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.418    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[23]_i_1_n_0
+    SLICE_X9Y48          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.348     3.766 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[27]_i_1/O[1]
+                         net (fo=2, routed)           0.725     4.491    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_119_fu_2158_p2__0[25]
+    SLICE_X6Y51          LUT3 (Prop_lut3_I0_O)        0.303     4.794 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/layer2_out_3_reg_416[25]_i_1/O
+                         net (fo=1, routed)           0.000     4.794    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114_ap_return_3[25]
+    SLICE_X6Y51          FDRE                                         r  layer2_out_3_reg_416_reg[25]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    ap_clk
+    SLICE_X6Y51          FDRE                                         r  layer2_out_3_reg_416_reg[25]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X6Y51          FDRE (Setup_fdre_C_D)        0.079     4.968    layer2_out_3_reg_416_reg[25]
+  -------------------------------------------------------------------
+                         required time                          4.968    
+                         arrival time                          -4.794    
+  -------------------------------------------------------------------
+                         slack                                  0.174    
+
+Slack (MET) :             0.178ns  (required time - arrival time)
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            layer2_out_3_reg_416_reg[35]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.769ns  (logic 2.431ns (64.494%)  route 1.338ns (35.506%))
+  Logic Levels:           10  (CARRY4=8 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_clk
+    SLICE_X11Y37         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y37         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733_reg[0]/Q
+                         net (fo=1, routed)           0.763     2.192    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_115_reg_2733[0]
+    SLICE_X9Y42          LUT2 (Prop_lut2_I1_O)        0.124     2.316 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg[3]_i_5/O
+                         net (fo=1, routed)           0.000     2.316    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg[3]_i_5_n_0
+    SLICE_X9Y42          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     2.848 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     2.848    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[3]_i_1_n_0
+    SLICE_X9Y43          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.962 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     2.962    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[7]_i_1_n_0
+    SLICE_X9Y44          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.076 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.076    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[11]_i_1_n_0
+    SLICE_X9Y45          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.190 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.190    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[15]_i_1_n_0
+    SLICE_X9Y46          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.304 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.304    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[19]_i_1_n_0
+    SLICE_X9Y47          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.418 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.418    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[23]_i_1_n_0
+    SLICE_X9Y48          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.532 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.532    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[27]_i_1_n_0
+    SLICE_X9Y49          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     3.861 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_return_3_int_reg_reg[31]_i_1/O[3]
+                         net (fo=2, routed)           0.575     4.436    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln58_119_fu_2158_p2__0[31]
+    SLICE_X7Y52          LUT3 (Prop_lut3_I0_O)        0.306     4.742 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/layer2_out_3_reg_416[35]_i_1/O
+                         net (fo=1, routed)           0.000     4.742    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114_ap_return_3[35]
+    SLICE_X7Y52          FDRE                                         r  layer2_out_3_reg_416_reg[35]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    ap_clk
+    SLICE_X7Y52          FDRE                                         r  layer2_out_3_reg_416_reg[35]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X7Y52          FDRE (Setup_fdre_C_D)        0.031     4.920    layer2_out_3_reg_416_reg[35]
+  -------------------------------------------------------------------
+                         required time                          4.920    
+                         arrival time                          -4.742    
+  -------------------------------------------------------------------
+                         slack                                  0.178    
+
+Slack (MET) :             0.185ns  (required time - arrival time)
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/data_2_val_read_reg_2306_pp0_iter2_reg_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417_reg[28]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.840ns  (logic 1.692ns (44.066%)  route 2.148ns (55.934%))
+  Logic Levels:           6  (CARRY4=5 LUT2=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/ap_clk
+    SLICE_X28Y66         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/data_2_val_read_reg_2306_pp0_iter2_reg_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y66         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/data_2_val_read_reg_2306_pp0_iter2_reg_reg[2]/Q
+                         net (fo=23, routed)          2.139     3.630    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/RESIZE[14]
+    SLICE_X16Y74         LUT2 (Prop_lut2_I0_O)        0.124     3.754 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417[14]_i_2/O
+                         net (fo=1, routed)           0.000     3.754    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417[14]_i_2_n_0
+    SLICE_X16Y74         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     4.130 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417_reg[14]_i_1/CO[3]
+                         net (fo=1, routed)           0.009     4.139    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417_reg[14]_i_1_n_0
+    SLICE_X16Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.256 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417_reg[18]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     4.256    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417_reg[18]_i_1_n_0
+    SLICE_X16Y76         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.373 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417_reg[22]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     4.373    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417_reg[22]_i_1_n_0
+    SLICE_X16Y77         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.490 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417_reg[26]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     4.490    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417_reg[26]_i_1_n_0
+    SLICE_X16Y78         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     4.813 r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417_reg[28]_i_1/O[1]
+                         net (fo=1, routed)           0.000     4.813    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_fu_1341_p2[28]
+    SLICE_X16Y78         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/ap_clk
+    SLICE_X16Y78         FDRE                                         r  grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417_reg[28]/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X16Y78         FDRE (Setup_fdre_C_D)        0.109     4.998    grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417_reg[28]
+  -------------------------------------------------------------------
+                         required time                          4.998    
+                         arrival time                          -4.813    
+  -------------------------------------------------------------------
+                         slack                                  0.185    
+
+Slack (MET) :             0.186ns  (required time - arrival time)
+  Source:                 input_layer_ap_vld_preg_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_enable_reg_pp0_iter22_reg/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.525ns  (logic 0.580ns (16.452%)  route 2.945ns (83.548%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    ap_clk
+    SLICE_X21Y72         FDRE                                         r  input_layer_ap_vld_preg_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X21Y72         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  input_layer_ap_vld_preg_reg/Q
+                         net (fo=20, routed)          0.835     2.264    grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/input_layer_ap_vld_preg
+    SLICE_X24Y66         LUT3 (Prop_lut3_I1_O)        0.124     2.388 r  grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/ap_ce_reg_i_1/O
+                         net (fo=1410, routed)        2.111     4.498    ap_enable_reg_pp0_iter11
+    SLICE_X41Y98         FDRE                                         r  ap_enable_reg_pp0_iter22_reg/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    ap_clk
+    SLICE_X41Y98         FDRE                                         r  ap_enable_reg_pp0_iter22_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X41Y98         FDRE (Setup_fdre_C_CE)      -0.205     4.684    ap_enable_reg_pp0_iter22_reg
+  -------------------------------------------------------------------
+                         required time                          4.684    
+                         arrival time                          -4.498    
+  -------------------------------------------------------------------
+                         slack                                  0.186    
+
+Slack (MET) :             0.186ns  (required time - arrival time)
+  Source:                 input_layer_ap_vld_preg_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            ap_enable_reg_pp0_iter23_reg/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (ap_clk rise@4.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.525ns  (logic 0.580ns (16.452%)  route 2.945ns (83.548%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 4.924 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.973     0.973    ap_clk
+    SLICE_X21Y72         FDRE                                         r  input_layer_ap_vld_preg_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X21Y72         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  input_layer_ap_vld_preg_reg/Q
+                         net (fo=20, routed)          0.835     2.264    grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/input_layer_ap_vld_preg
+    SLICE_X24Y66         LUT3 (Prop_lut3_I1_O)        0.124     2.388 r  grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config7_s_fu_168/ap_ce_reg_i_1/O
+                         net (fo=1410, routed)        2.111     4.498    ap_enable_reg_pp0_iter11
+    SLICE_X41Y98         FDRE                                         r  ap_enable_reg_pp0_iter23_reg/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     4.000     4.000 r  
+                                                      0.000     4.000 r  ap_clk (IN)
+                         net (fo=8111, unset)         0.924     4.924    ap_clk
+    SLICE_X41Y98         FDRE                                         r  ap_enable_reg_pp0_iter23_reg/C
+                         clock pessimism              0.000     4.924    
+                         clock uncertainty           -0.035     4.889    
+    SLICE_X41Y98         FDRE (Setup_fdre_C_CE)      -0.205     4.684    ap_enable_reg_pp0_iter23_reg
+  -------------------------------------------------------------------
+                         required time                          4.684    
+                         arrival time                          -4.498    
+  -------------------------------------------------------------------
+                         slack                                  0.186    
+
+
+
+
