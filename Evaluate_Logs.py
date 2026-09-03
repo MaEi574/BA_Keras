@@ -151,8 +151,8 @@ def evaluateTimingPaths(logsDirPath):
                                 timingPathsEvaluationOutput += "\n"
                                 timingPathsEvaluationOutput += "\n"
             
-            timingPathsEvaluationOutput += "Top 20 critical paths ending on DSP arithmetic logic: " + str(dspArithmeticPaths) + "\n"
-            timingPathsEvaluationOutput += "Top 20 critical paths ending on control logic: " + str(controlLogicPaths) + "\n"
+            timingPathsEvaluationOutput += "Top 20 kritische Pfade, die auf DSP-Arithmetik-Logik enden: " + str(dspArithmeticPaths) + "\n"
+            timingPathsEvaluationOutput += "Top 20 kritische Pfade, die auf Kontroll-Logik enden: " + str(controlLogicPaths) + "\n"
             timingPathsEvaluationOutput += "\n"
                         
                                                     
