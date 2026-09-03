@@ -1,0 +1,1456 @@
+============================================================
+Custom___Custom
+============================================================
+
+Slack (VIOLATED) :        -0.435ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_2_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.435ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_5_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.435ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.360ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_6_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.307ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_4_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_2_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.307ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_4_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_5_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.244ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer5_out_4_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer5_out_4_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.244ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer5_out_4_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer5_out_6_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.203ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_1_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.203ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_3_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.203ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_4_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.203ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_7_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.154ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/icmp_ln62_reg_667_reg[0]/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/dsp_48ns_32ns_64ns_25ns_30s_18s_48ns_1ns_48_5_1_U16/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18s_48ns_1ns_48_5_1_DSP_Builtin_U/p_reg_reg/CEB1
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.149ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer5_out_4_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer5_out_1_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.149ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer5_out_4_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer5_out_2_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.149ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer5_out_4_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer5_out_7_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.109ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/icmp_ln62_reg_667_reg[0]/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/w2_U/q0_t0_reg/REGCEAREGCE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.109ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/icmp_ln62_reg_667_reg[0]/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/w2_U/q0_t0_reg/REGCEB
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.101ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_4_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_7_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.088ns  (required time - arrival time)
+
+  Source:                 layer6_out_3_U/full_n_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer6_out_1_reg/R
+
+
+------------------------------------------------------------
+
+Top 20 critical paths ending on DSP arithmetic logic: 0
+Top 20 critical paths ending on control logic: 20
+
+============================================================
+Custom___Custom_Edited
+============================================================
+
+Slack (VIOLATED) :        -0.435ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_2_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.435ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_5_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.435ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.360ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_6_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.307ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_4_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_2_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.307ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_4_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_5_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.244ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer5_out_4_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer5_out_4_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.244ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer5_out_4_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer5_out_6_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.203ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_1_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.203ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_3_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.203ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_4_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.203ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_7_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.154ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/icmp_ln62_reg_667_reg[0]/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/dsp_48ns_32ns_64ns_25ns_30s_18s_48ns_1ns_48_5_1_U16/SampleNeuralNet_dsp_48ns_32ns_64ns_25ns_30s_18s_48ns_1ns_48_5_1_DSP_Builtin_U/p_reg_reg/CEB1
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.149ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer5_out_4_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer5_out_1_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.149ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer5_out_4_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer5_out_2_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.149ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer5_out_4_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer5_out_7_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.109ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/icmp_ln62_reg_667_reg[0]/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/w2_U/q0_t0_reg/REGCEAREGCE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.109ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/icmp_ln62_reg_667_reg[0]/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/w2_U/q0_t0_reg/REGCEB
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.101ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_4_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_7_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.088ns  (required time - arrival time)
+
+  Source:                 layer6_out_3_U/full_n_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer6_out_1_reg/R
+
+
+------------------------------------------------------------
+
+Top 20 critical paths ending on DSP arithmetic logic: 0
+Top 20 critical paths ending on control logic: 20
+
+============================================================
+Custom_Attempted_Fix___Custom
+============================================================
+
+Slack (VIOLATED) :        -3.668ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][18]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.668ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][20]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.668ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][7]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.668ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][9]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.648ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][11]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.648ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][30]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.648ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][42]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.648ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][46]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.624ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][14]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.624ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][17]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.624ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][19]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.624ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][27]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.609ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][28]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.609ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][3]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.609ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][41]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.526ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][10]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.526ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][15]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.526ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][37]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.526ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][8]_srl18/CE
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -3.526ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_6_U/fifo_reg[17][49]_srl18/CLK
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/pf_ap_return_4_U/fifo_reg[17][38]_srl18/CE
+
+
+------------------------------------------------------------
+
+Top 20 critical paths ending on DSP arithmetic logic: 0
+Top 20 critical paths ending on control logic: 20
+
+============================================================
+Custom_Integration_Test___Custom
+============================================================
+
+Slack (VIOLATED) :        -0.517ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/icmp_ln45_reg_610_pp0_iter10_reg_reg[0]__0_rep/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[27]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.478ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_loop_init_pp0_iter4_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/mac_muladd_16s_16s_34s_34_4_1_U55/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[20]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.448ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[46]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.445ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[38]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.441ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[41]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.439ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_4_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.439ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_5_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.439ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_6_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.439ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.439ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[45]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.437ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[37]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.432ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[36]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.429ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[39]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.429ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[44]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.429ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[47]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.421ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[3]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.415ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_enable_reg_pp0_iter11_reg_rep__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_35_4_1_U7/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[40]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.414ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_enable_reg_pp0_iter11_reg_rep__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_35_4_1_U7/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[41]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.409ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_enable_reg_pp0_iter11_reg/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/OPMODE[4]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.396ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_loop_init_pp0_iter4_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_35_4_1_U28/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[40]
+
+
+------------------------------------------------------------
+
+Top 20 critical paths ending on DSP arithmetic logic: 15
+Top 20 critical paths ending on control logic: 5
+
+============================================================
+Custom_Integration_Test___Custom_Edited
+============================================================
+
+Slack (VIOLATED) :        -0.814ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_4_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.814ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_7_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.750ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_1_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.750ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_2_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.750ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_3_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.750ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_5_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.750ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_6_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.750ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config2_U0/ap_done_reg_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer2_out_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.691ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_loop_init_pp0_iter4_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_35_4_1_U30/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[39]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.691ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_loop_init_pp0_iter4_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_35_4_1_U30/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[44]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.691ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_loop_init_pp0_iter4_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_35_4_1_U30/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[47]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.680ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_loop_init_pp0_iter4_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_35_4_1_U30/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[38]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.666ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_loop_init_pp0_iter4_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_35_4_1_U30/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[46]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.666ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/icmp_ln45_reg_919_pp0_iter4_reg_reg[0]__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/mac_muladd_16s_16s_34s_34_4_1_U55/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[39]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.666ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/icmp_ln45_reg_919_pp0_iter4_reg_reg[0]__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/mac_muladd_16s_16s_34s_34_4_1_U55/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[47]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.615ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/ap_enable_reg_pp0_iter5_reg_rep__4/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config6_U0/mac_muladd_16s_16s_34s_35_4_1_U52/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[18]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.606ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_loop_init_pp0_iter4_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_35_4_1_U30/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[33]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.588ns  (required time - arrival time)
+
+  Source:                 layer4_out_7_U/empty_n_reg/C
+
+  Destination:            layer4_out_1_U/mOutPtr_reg[0]/D
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.585ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_loop_init_pp0_iter4_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_35_4_1_U28/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[39]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.585ns  (required time - arrival time)
+
+  Source:                 custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/ap_loop_init_pp0_iter4_reg_reg__0/C
+
+  Destination:            custom_dsp_dense_implementation_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_35_4_1_U28/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[44]
+
+
+------------------------------------------------------------
+
+Top 20 critical paths ending on DSP arithmetic logic: 11
+Top 20 critical paths ending on control logic: 9
+
+============================================================
+Stock___Basic
+============================================================
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/data_2_val_read_reg_2306_pp0_iter2_reg_reg[10]/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417_reg[28]/D
+
+
+------------------------------------------------------------
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/a_1_reg_2283_pp0_iter2_reg_reg[14]/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/sub_ln73_40_reg_2426_reg[28]/D
+
+
+------------------------------------------------------------
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/data_2_val_read_reg_2306_pp0_iter2_reg_reg[10]/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417_reg[27]/D
+
+
+------------------------------------------------------------
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/data_2_val_read_reg_2306_pp0_iter2_reg_reg[10]/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417_reg[24]/D
+
+
+------------------------------------------------------------
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/a_1_reg_2283_pp0_iter2_reg_reg[14]/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/sub_ln73_40_reg_2426_reg[27]/D
+
+
+------------------------------------------------------------
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/data_2_val_read_reg_2306_pp0_iter2_reg_reg[10]/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/add_ln73_10_reg_2417_reg[26]/D
+
+
+------------------------------------------------------------
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/a_reg_2275_pp0_iter2_reg_reg[15]/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/sub_ln73_39_reg_2416_reg[28]/D
+
+
+------------------------------------------------------------
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_ce_reg_reg_replica/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln73_reg_2401_reg[23]/CE
+
+
+------------------------------------------------------------
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_ce_reg_reg_replica/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln73_reg_2401_reg[24]/CE
+
+
+------------------------------------------------------------
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_ce_reg_reg_replica/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln73_reg_2401_reg[25]/CE
+
+
+------------------------------------------------------------
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_ce_reg_reg_replica/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln73_reg_2401_reg[26]/CE
+
+
+------------------------------------------------------------
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/data_2_val_read_reg_2306_pp0_iter2_reg_reg[0]/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/sub_ln58_3_reg_2572_reg[28]/D
+
+
+------------------------------------------------------------
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_ce_reg_reg_replica/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln73_reg_2401_reg[19]/CE
+
+
+------------------------------------------------------------
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_ce_reg_reg_replica/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln73_reg_2401_reg[20]/CE
+
+
+------------------------------------------------------------
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_ce_reg_reg_replica/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln73_reg_2401_reg[21]/CE
+
+
+------------------------------------------------------------
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/ap_ce_reg_reg_replica/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/add_ln73_reg_2401_reg[22]/CE
+
+
+------------------------------------------------------------
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/data_2_val_read_reg_2306_pp0_iter2_reg_reg[0]/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/sub_ln58_3_reg_2572_reg[25]/D
+
+
+------------------------------------------------------------
+
+  Source:                 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/a_reg_2275_pp0_iter1_reg_reg[5]_srl2_srlopt/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config2_s_fu_114/sub_ln73_39_reg_2416_reg[25]/D
+
+
+------------------------------------------------------------
+
+  Source:                 grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config3_s_fu_120/icmp_ln551_17_reg_340_reg[0]/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/data_3_val_int_reg_reg[10]/R
+
+
+------------------------------------------------------------
+
+  Source:                 grp_thresholded_relu_ap_fixed_ap_fixed_ap_fixed_thresholdedrelu_config3_s_fu_120/icmp_ln551_17_reg_340_reg[0]/C
+
+  Destination:            grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_36_16_5_3_0_config4_s_fu_132/data_3_val_int_reg_reg[11]/R
+
+
+------------------------------------------------------------
+
+Top 20 critical paths ending on DSP arithmetic logic: 0
+Top 20 critical paths ending on control logic: 20
+
+============================================================
+Stock___Reuse8
+============================================================
+
+Slack (VIOLATED) :        -0.517ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/icmp_ln46_reg_610_pp0_iter10_reg_reg[0]__0_rep/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[27]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.478ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_loop_init_pp0_iter4_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/mac_muladd_16s_16s_34s_34_4_1_U55/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[20]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.448ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[46]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.445ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[38]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.441ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[41]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.439ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_4_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.439ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_5_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.439ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_6_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.439ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.439ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[45]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.437ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[37]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.432ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[36]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.429ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[39]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.429ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[44]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.429ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[47]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.421ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[3]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.415ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_enable_reg_pp0_iter11_reg_rep__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_35_4_1_U7/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[40]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.414ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_enable_reg_pp0_iter11_reg_rep__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_35_4_1_U7/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[41]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.409ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_enable_reg_pp0_iter11_reg/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/OPMODE[4]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.396ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_loop_init_pp0_iter4_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_35_4_1_U28/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[40]
+
+
+------------------------------------------------------------
+
+Top 20 critical paths ending on DSP arithmetic logic: 15
+Top 20 critical paths ending on control logic: 5
+
+============================================================
+Stock___Reuse8_Edited
+============================================================
+
+Slack (VIOLATED) :        -0.517ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/icmp_ln46_reg_610_pp0_iter10_reg_reg[0]__0_rep/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[27]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.478ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/ap_loop_init_pp0_iter4_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config6_U0/mac_muladd_16s_16s_34s_34_4_1_U55/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[20]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.448ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[46]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.445ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[38]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.441ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[41]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.439ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_4_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.439ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_5_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.439ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_6_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.439ns  (required time - arrival time)
+
+  Source:                 ap_sync_reg_channel_write_layer4_out_3_reg/C
+
+  Destination:            ap_sync_reg_channel_write_layer4_out_reg/R
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.439ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[45]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.437ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[37]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.432ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[36]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.429ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[39]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.429ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[44]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.429ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[47]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.421ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_loop_init_pp0_iter10_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/C[3]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.415ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_enable_reg_pp0_iter11_reg_rep__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_35_4_1_U7/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[40]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.414ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_enable_reg_pp0_iter11_reg_rep__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_35_4_1_U7/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[41]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.409ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/ap_enable_reg_pp0_iter11_reg/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config2_U0/mac_muladd_16s_16s_34s_34_4_1_U8/SampleNeuralNet_mac_muladd_16s_16s_34s_34_4_1_DSP48_0_U/p_reg_reg/OPMODE[4]
+
+
+------------------------------------------------------------
+
+Slack (VIOLATED) :        -0.396ns  (required time - arrival time)
+
+  Source:                 dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/ap_loop_init_pp0_iter4_reg_reg__0/C
+
+  Destination:            dense_resource_rf_leq_nin_ap_int_16_ap_int_48_config4_U0/mac_muladd_16s_16s_34s_35_4_1_U28/SampleNeuralNet_mac_muladd_16s_16s_34s_35_4_1_DSP48_0_U/p_reg_reg/C[40]
+
+
+------------------------------------------------------------
+
+Top 20 critical paths ending on DSP arithmetic logic: 15
+Top 20 critical paths ending on control logic: 5
+
