@@ -63,25 +63,17 @@ namespace nnet {
 
                 hls::dsp48e1::A_t dspA;
                 hls::dsp48e1::B_t dspB;
-                bool dspInit;
-                int weightSelectIndex;
-                int inputSelectIndex;
+                bool dspInit = (inputLoopIndex == 0);
+                int inputSelectIndex = dspInit ? 0 : inputLoopIndex-1;
+                int weightSelectIndex = dspInit ? 0 : inputSelectIndex + (neuronLoopIndex * nin);
 
                 if (inputLoopIndex == 0) {  // EXECUTE FOR THE FIRST LOOP ITERATION: INITIALIZE ACCUMULATOR REGISTERS WITH BIASES
                     dspA = (hls::dsp48e1::A_t)biases[neuronLoopIndex];
                     dspB = (hls::dsp48e1::B_t)1;
-                    dspInit = true;
                 }
                 else {                      // EXECUTE FOR REMAINING 8 LOOP ITERATIONS: REGULAR input_x * weight_y_x MAC
-                    weightSelectIndex = inputLoopIndex-1;
-                    inputSelectIndex = inputLoopIndex-1;
                     dspA = (hls::dsp48e1::A_t)data[inputSelectIndex];
                     dspB = (hls::dsp48e1::B_t)weights[weightSelectIndex];
-                    dspInit = false;
-
-                    // Increment weightSelectIndex
-                    weightSelectIndex += rufactor;    // ADDING 8 TO THE WEIGHTS INDEX GIVES US THE NEXT NEURON'S WEIGHT FOR THAT INPUT, e.g:
-                                                    // weights[0] = w_0_0 (neuron 0, input 0), weights[8] = w_1_0 (neuron 1, input 0)
                     }
 
                 dspAccumulators[neuronLoopIndex].mul_acc(dspA, dspB, dspInit);
