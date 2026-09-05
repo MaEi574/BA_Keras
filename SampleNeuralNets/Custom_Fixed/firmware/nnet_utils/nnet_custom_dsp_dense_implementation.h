@@ -54,7 +54,7 @@ namespace nnet {
 
     InputLoop:
         for (int inputLoopIndex = 0; inputLoopIndex < rufactor+1; inputLoopIndex++) {      // Loop through all inputs -> inputLoopIndex = x <-> working on input x
-            #pragma HLS PIPELINE II=1 rewind
+            #pragma HLS PIPELINE II=1
 
 
         NeuronLoop:
