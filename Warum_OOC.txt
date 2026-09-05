@@ -1,0 +1,10 @@
+[Place 30-415] IO Placement failed due to overutilization.
+This design contains 271 I/O ports while the target device: 7z010 package: clg400, contains only 230 available user I/O
+ The target device has 230 usable I/O pins of which 0 are already occupied by user-locked I/Os.
+ To rectify this issue:
+	1. Ensure you are targeting the correct device and package. Select a larger device or different package if necessary.
+	2. Check the top-level ports of the design to ensure the correct number of ports are specified.
+	3. Consider design changes to reduce the number of I/Os necessary.
+	
+[Place 30-68] Instance ap_clk_IBUF_BUFG_inst (BUFG) is not placed
+[Place 30-68] Instance ap_clk_IBUF_inst (IBUF) is not placed
