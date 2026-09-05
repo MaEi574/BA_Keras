@@ -18,7 +18,7 @@ HLSConfig:
         bias: int<16>
         result: int<48>
         weight: int<16>
-      ReuseFactor: 8
+      ReuseFactor: 2
       Strategy: Resource
       Trace: false
     input_layer:
@@ -64,7 +64,7 @@ OutputShapes:
   - 1
 Part: xc7z010clg400-1
 ProjectName: SampleNeuralNet
-Stamp: 61ca1921
+Stamp: 8e237255
 Version: 1.0.0
 WriterConfig:
   Namespace: null

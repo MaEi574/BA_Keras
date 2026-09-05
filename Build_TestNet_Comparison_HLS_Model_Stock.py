@@ -61,7 +61,11 @@ for denseName in ["dense1", "dense2"]:
     config["LayerName"][denseName]["Precision"]["accum"] = "int<48>"
     config["LayerName"][denseName]["Precision"]["result"] = "int<48>"
     
-    config["LayerName"][denseName]["ReuseFactor"] = 8
+    if (denseName == "dense1"):
+        reuseFactor = 8
+    else:
+        reuseFactor = 2
+    config["LayerName"][denseName]["ReuseFactor"] = reuseFactor
     config["LayerName"][denseName]["Strategy"] = "Resource"
     
 for reluName in ["relu1", "relu2"]:
